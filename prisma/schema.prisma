@@ -1,0 +1,30 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id Int @id @default(autoincrement())
+  username String @unique
+  email String? @unique
+  password String?
+  phone String? @unique
+  github_id String? @unique
+  avater String?
+  // avater String? @default("http://222.com/asdasd");
+  // 이런식으로 기본 이미지를 넣어 줄 수 도 있다.
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
+
+model Goods {
+  id Int @id @default(autoincrement())
+  title String @unique
+  poster String?
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
