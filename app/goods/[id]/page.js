@@ -1,12 +1,15 @@
 import { Metadata } from "next";
 import { API_URL } from "../../(home)/page";
-import MovieInfo from "../../components/movie-info";
+import MovieInfo, { getMovie } from "../../components/movie-info";
 import MovieVideos from "../../components/movie-videos";
 import { Suspense } from "react";
 
-export const metadata = {
-  title: "상품명",
-};
+export async function generateMetadata({ params: { id } }) {
+    const movie = await getMovie(id);
+    return {
+      title: movie.title,
+    };
+  }
 
 export default async function Goods({params:{id}}){
     //const movie = await getMovie(id);

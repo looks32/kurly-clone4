@@ -1,0 +1,6 @@
+.movie_list li img {
+    width: 200px;
+}
+.movie_list li a {
+    color:red;
+}

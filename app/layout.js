@@ -1,3 +1,4 @@
+import "./styles/reset.css";
 import Header from "./components/header";
 import { Metadata } from "next";
 

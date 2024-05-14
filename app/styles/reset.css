@@ -1,0 +1,184 @@
+@charset "utf-8";
+
+/* @font-face {
+	font-family:"ns";
+	font-style:normal;
+	font-weight:400;
+	src:url("../font/NotoSans-Regular.woff2") format("woff"),
+	url("../font/NotoSans-Regular.woff") format("woff")
+}
+
+@font-face {
+	font-family:"nsm";
+	font-style:normal;
+	font-weight:500;
+	src:url("../font/NotoSans-Medium.woff2") format("woff"),
+	url("../font/NotoSans-Medium.woff") format("woff")
+}
+
+@font-face {
+	font-family:"nsb";
+	font-style:normal;
+	font-weight:700;
+	src:url("../font/NotoSans-Bold.woff2") format("woff"),
+	url("../font/NotoSans-Bold.woff") format("woff")
+} */
+
+
+
+/* Reset */
+* {box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; word-break:break-all}
+html {height:100%; overflow-y:scroll; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%; line-height:1.3; font-size:14px}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0; padding:0}
+body {width:100%; height:100%; min-width:320px; color:#111; font-size:16px; font-family:"ns", "맑은 고딕", "Malgun Gothic", Dotum, Arial, sans-serif; -webkit-font-smoothing:antialiased; -webkit-overflow-scrolling:touch; /* padding-top:constant(safe-area-inset-top); padding-bottom:constant(safe-area-inset-bottom); padding-top:env(safe-area-inset-top); padding-bottom:env(safe-area-inset-bottom); */}
+h1,h2,h3,h4,h5,h6 {font-weight:normal; font-size:100%}
+input, select, textarea, button, label {font-size:100%; vertical-align:middle}
+
+/* input::-ms-clear,
+input::-ms-reveal {display:none; width:0; height:0}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {display:none} */
+
+input {border:1px solid #ccc; border-radius:4px; font-size:15px; overflow:visible; /*transition:border 0.4s;*/ font-family:'ns'; color:#111}
+input[type="text"], 
+input[type="password"], 
+input[type="tel"], 
+input[type="email"], 
+input[type="number"], 
+input[type="date"], 
+input[type="search"] {width:100%; height:40px; font-size:15px; padding:0 13px 0 13px; outline:none; font-family:"ns"; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:#fff}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {display:none}
+
+/* input[type="date"] {background:url(../images/icon/icon_calandar.png) right 12px center no-repeat; background-size:16px} */
+/* input[type="date"]::-webkit-calendar-picker-indicator {color:transparent; background:none} */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; margin:0}
+
+input:read-only{color:#111; border-color:#e5e5e5; background-color:#f5f5f5}
+input:disabled{color:#666; border-color:#e5e5e5; -webkit-text-fill-color:inherit; background:#f5f5f5}
+input:focus {transition:all 0.4s; border-color:#0263e1}
+input.error {color:#666; border-color:#cc0000}
+.input_error {display:block; margin-top:7px; color:#cc0000; font-size:13px}
+
+::-webkit-input-placeholder {font-size:14px; color:#666; vertical-align:middle}
+:-ms-input-placeholder {font-size:14px; color:#666; vertical-align:middle}
+input[type="text"].datepicker {width:200px; padding:0 35px 0 13px}
+
+/* input.w300 ,
+select.w300 {width:300px !important}
+input.w250 ,
+select.w250 {width:250px !important}
+.datepicker_wrap {display:inline-block; position:relative}
+.datepicker_wrap button {position:absolute; right:12px; top:12px; width:16px; height:16px; text-indent:-9999em; background:url(../img/icon/icon_calandar.png) center center no-repeat} */
+
+/* select,
+.select_btn {width:auto; min-width:120px; height:40px; padding:0 30px 0 12px; font-size:15px; color:#666; font-family:"ns", "맑은 고딕", "Malgun Gothic", Dotum, Arial, sans-serif; border:none; -webkit-appearance:none; -moz-appearance:none; appearance:none; text-transform:none; outline:none; transition:border 0.4s; border:1px solid #ccc; border-radius:4px; background:#fff url(../img/common/icon_select.png) right 10px center no-repeat; -webkit-background-size:10px 5px; background-size:10px 5px}
+select::-ms-expand {display:none}
+select:disabled {color:#666; -webkit-text-fill-color:inherit; border-color:#e5e5e5; background:#f5f5f5 url(../img/common/icon_select.png) right 10px center no-repeat; background-size:10px 5px}
+select:disabled option {color:#111}
+select:focus {border-color:#0263e1; background-color:#fff} */
+strong {display:inline-block; font-family:'nsb'}
+fieldset, img, iframe {border:0 none}
+img {max-width:100%; height:auto; vertical-align:middle; border-style:none}
+textarea {width:100%; padding:10px; -webkit-box-sizing:border-box; box-sizing:border-box; resize:none; border:1px solid #ccc; font-family:"ns", "맑은 고딕", "Malgun Gothic", Dotum, Arial, sans-serif; -webkit-appearance:none; -moz-appearance:none; appearance:none; border-radius:4px; outline:none; transition:0.4s border}
+textarea:focus {border-color:#0263e1}
+em, address {font-style:normal}
+a {text-decoration:none; background-color:transparent; vertical-align:middle; -webkit-text-decoration-skip:objects; color:#000; word-break:break-word}
+a:hover, a:active, a:focus {text-decoration:none}
+menu,li {list-style:none}
+button {padding:0; margin:0; overflow:visible; cursor:pointer; vertical-align:middle; text-transform:none; font-family:"ns", "맑은 고딕", "Malgun Gothic", Dotum, Arial, sans-serif; border:none; background:none}
+button, html [type="button"], [type="reset"],[type="submit"] {-webkit-appearance:none}
+caption {width:0; height:0; font-size:0; line-height:0; overflow:hidden}
+hr {display:none}
+i,em,address {font-style:normal}
+label {cursor:pointer}
+table {width:100%; color:#000; table-layout:fixed; border-spacing:0; border-collapse:collapse}
+table td {word-wrap:break-word}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; margin:0}
+
+
+/* 공통 */
+.hidden {position:absolute; left:-9999em; top:-9999em; width:0px; height:0px; overflow:hidden}
+.ib {display:inline-block}
+.tar {text-align:right !important}
+.tal {text-align:left !important}
+.tac {text-align:center !important}
+.fl {float:left !important}
+.fr {float:right !important}
+.fn {font:none !important; overflow:hidden}
+.b {font-family:"nsb"}
+.w100 {width:100% !important}
+.bdn {border:none !important}
+.bdtn {border-top:none !important}
+.hide {display:none !important}
+.els {display:block; width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; word-wrap:normal}
+
+
+/* 간격 */
+.mt0 {margin-top:0 !important}
+.mt5 {margin-top:5px !important}
+.mt10 {margin-top:10px !important}
+.mt15 {margin-top:15px !important}
+.mt20 {margin-top:20px !important}
+.mt25 {margin-top:25px !important}
+.mt30 {margin-top:30px !important}
+.mt40 {margin-top:40px !important}
+.mt45 {margin-top:45px !important}
+.mt50 {margin-top:50px !important}
+.mt60 {margin-top:60px !important}
+.mt100 {margin-top:100px !important}
+
+.mb5 {margin-bottom:5px !important}
+.mb10 {margin-bottom:10px !important}
+.mb15 {margin-bottom:15px !important}
+.mb20 {margin-bottom:20px !important}
+.mb25 {margin-bottom:25px !important}
+.mb30 {margin-bottom:30px !important}
+.mb45 {margin-bottom:45px !important}
+.mb50 {margin-bottom:50px !important}
+.mb100 {margin-bottom:100px !important}
+
+.mr5 {margin-right:5px !important}
+.mr10 {margin-right:10px !important}
+.mr15 {margin-right:15px !important}
+.mr20 {margin-right:20px !important}
+.mr25 {margin-right:25px !important}
+.mr30 {margin-right:30px !important}
+.mr40 {margin-right:40px !important}
+.mr50 {margin-right:50px !important}
+
+.ml5 {margin-left:5px !important}
+.ml10 {margin-left:10px !important}
+.ml15 {margin-left:15px !important}
+.ml20 {margin-left:20px !important}
+.ml25 {margin-left:25px !important}
+.ml30 {margin-left:30px !important}
+.ml40 {margin-left:40px !important}
+.ml50 {margin-left:50px !important}
+
+.pl0 {padding-left:0 !important}
+
+/* 크기 */
+.w10 {width:10% !important}
+.w20 {width:20% !important}
+.w30 {width:30% !important}
+.w40 {width:40% !important}
+.w50 {width:50% !important}
+.w60 {width:60% !important}
+.w70 {width:70% !important}
+.w80 {width:80% !important}
+.w90 {width:90% !important}
+.w100 {width:100% !important}
+
+
+body.fix {position:fixed; width:100%; height:100%; overflow:hidden}
+body.fix main {position:fixed; width:100%; height:100%}
