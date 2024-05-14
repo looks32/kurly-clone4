@@ -11,7 +11,7 @@ export default function Moive({title, id, poster_path}){
     return(
         <li>
             <img src={poster_path} alt={title} onClick={onClick}/>
-            <Link href={`goods/${id}`}>{title}</Link>
+            <Link prefetch href={`goods/${id}`}>{title}</Link>
         </li>
     )
 }
