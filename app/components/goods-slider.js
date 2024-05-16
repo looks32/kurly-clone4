@@ -14,53 +14,23 @@ export default function GoodsSlider() {
   const slideData = [
     {
       id: 1,
-      text: '배너1',
+      text: '[부침명장] 한입아삭 김치전',
       poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_1.png'
     },
     {
       id: 2,
-      text: '배너2',
+      text: '[마더푸드] 오리지널 쪽갈비',
       poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_2.png'
     },
     {
       id: 3,
-      text: '배너3',
+      text: '당도선별 성주 참외 1.5kg (4~7입)',
       poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_3.png'
     },
     {
       id: 4,
-      text: '배너4',
+      text: '[외계인방앗간] 우리쌀 모닝빵 3종',
       poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_4.png'
-    },
-    {
-      id: 5,
-      text: '배너5',
-      poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_5.png'
-    },
-    {
-      id: 6,
-      text: '배너6',
-      poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_6.png'
-    },
-    {
-      id: 7,
-      text: '배너7',
-      poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_7.png'
-    },
-    {
-      id: 8,
-      text: '배너8',
-      poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_8.png'
-    },
-    {
-      id: 9,
-      text: '배너9',
-      poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_9.png'
-    },
-    {
-      id: 10,
-      text: '배너10',
-      poster : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1715834378/banner_10.png'
     }
   ];
 
