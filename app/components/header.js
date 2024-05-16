@@ -16,7 +16,7 @@ export default function Header(){
                             <Link href="#none;" className={styles.font_puple}>회원가입</Link>
                         </li>
                         <li>
-                            <Link href="#none;">로그인</Link>
+                            <Link href="/login">로그인</Link>
                         </li>
                         <li>
                             <Link href="#none;">고객센터</Link>
@@ -25,7 +25,7 @@ export default function Header(){
                 </div>
                 <div className={styles.middle}>
                     <h1>
-                        <Link href="#none;">
+                        <Link href="/">
                             <img src="https://res.cloudinary.com/dup3ee8is/image/upload/v1715824440/sgo40imjy5cdx0vz5nl6.svg" alt="컬리마켓 로고" />
                         </Link>
                     </h1>

@@ -1,0 +1,27 @@
+.login_area {
+    width:340px;
+    margin: 90px auto 60px;
+}
+
+.login_area h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.login_area form {
+    margin-top: 30px;
+}
+
+.login_area form input ~ input {
+    margin-top: 12px;
+}
+
+
+.btn_area {
+    margin-top: 30px;
+}
+
+.btn_area button ~ button {
+    margin-top: 10px;
+}

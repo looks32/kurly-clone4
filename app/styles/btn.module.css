@@ -1,0 +1,19 @@
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px 10px;
+    border-radius: 3px;
+    border: 1px solid #5f0080;
+}
+
+.basic {
+    background-color: #5f0080;
+    border-color: #5f0080;
+    color: #fff;
+}
+
+.white {
+    background-color: #fff;
+    border-color: #5f0080;
+    color: #5f0080;
+}

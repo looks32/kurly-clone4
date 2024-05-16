@@ -47,7 +47,7 @@ input[type="tel"],
 input[type="email"], 
 input[type="number"], 
 input[type="date"], 
-input[type="search"] {width:100%; height:40px; font-size:15px; padding:0 13px 0 13px; outline:none; font-family:"ns"; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:#fff}
+input[type="search"] {width:100%; height:54px; font-size:15px; padding:0 13px 0 13px; outline:none; font-family:"ns"; -webkit-appearance:none; -moz-appearance:none; appearance:none; background:#fff}
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -62,7 +62,7 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; margin
 
 input:read-only{color:#111; border-color:#e5e5e5; background-color:#f5f5f5}
 input:disabled{color:#666; border-color:#e5e5e5; -webkit-text-fill-color:inherit; background:#f5f5f5}
-input:focus {transition:all 0.4s; border-color:#0263e1}
+input:focus {transition:all 0.4s; border-color:#222}
 input.error {color:#666; border-color:#cc0000}
 .input_error {display:block; margin-top:7px; color:#cc0000; font-size:13px}
 
@@ -181,3 +181,9 @@ input[type="number"]::-webkit-inner-spin-button {-webkit-appearance:none; margin
 
 body.fix {position:fixed; width:100%; height:100%; overflow:hidden}
 body.fix main {position:fixed; width:100%; height:100%}
+
+
+
+.ad_area {margin-top: 90px;}
+
+.main_inner {width: 1050px; margin: 0px auto;}

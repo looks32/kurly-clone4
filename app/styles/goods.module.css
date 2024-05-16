@@ -1,0 +1,69 @@
+.goods_wrap {
+    width: 249px; /* 임시 */
+}
+
+.img_area,
+.img_area img {
+    border-radius: 4px;
+}
+
+.add_cart {
+    width: 100%;
+    margin-top: 6px;
+    line-height: 29px;
+    height: 36px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add_cart div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_cart svg {
+    width: 22px;
+    height: 22px;
+    margin: 1px 4px 0px 0px;
+}
+
+.tit {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.dimmed {
+    font-size: 14px;
+    color:#b5b5b5;
+    text-decoration: line-through;
+}
+
+.price_area {
+    display: flex;
+}
+
+.per {
+    color: #fa622f;
+}
+
+.real {
+    margin-left: 7px;
+    font-weight: bold;
+}
+
+.review {
+    display: flex;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #999;
+}
+
+.review svg {
+    width: 15px;
+    height: 15px;
+    margin-top: 2px;
+    margin-right: 3px;
+}

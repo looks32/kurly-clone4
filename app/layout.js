@@ -1,5 +1,6 @@
 import "./styles/reset.css";
 import Header from "./components/header";
+import TopBtn from "./components/top-btn";
 import { Metadata } from "next";
 
 export const metadata = {
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header/>
         {children}
+        <TopBtn/>
       </body>
     </html>
   )

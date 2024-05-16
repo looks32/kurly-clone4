@@ -1,0 +1,20 @@
+.top_btn {
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+}
+
+.top_btn button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999em;
+    background:url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715837144/top_btn.png') no-repeat center center;
+    background-size: 100%;
+}
+
+.top_btn button:hover {
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715837144/top_btn_hover.png');
+}

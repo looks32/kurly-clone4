@@ -1,0 +1,16 @@
+.tit_area {
+    margin-top: 90px;
+    margin-bottom: 27px;
+    text-align: center;
+}
+
+.tit_area strong {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.tit_area span {
+    font-size: 16px;
+    color: #999;
+}

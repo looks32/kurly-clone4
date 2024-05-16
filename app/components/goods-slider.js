@@ -1,5 +1,7 @@
 "use client";
 
+import Goods from "../components/goods";
+
 import Link from 'next/link';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,7 +10,7 @@ import "swiper/swiper.min.css";
 // import "swiper/components/navigation/navigation.min.css";
 // import "swiper/components/pagination/pagination.min.css";
 
-export default function MainBanner() {
+export default function GoodsSlider() {
   const slideData = [
     {
       id: 1,
@@ -66,16 +68,13 @@ export default function MainBanner() {
   return (
     <Swiper
       spaceBetween={10}
-      slidesPerView={1}
-      centeredSlides
+      slidesPerView={4}
       // onSlideChange={() => console.log("slide change")}
       // onSwiper={swiper => console.log(swiper)}
     >
       {slideData && slideData.map((slide) => (
           <SwiperSlide key={slide.id}>          
-            <Link href="#none;">
-              <img src={slide.poster} alt={slide.text} />
-            </Link>
+            <Goods/>
           </SwiperSlide>
         ))}
     </Swiper>
