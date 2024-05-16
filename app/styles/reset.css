@@ -1,29 +1,28 @@
 @charset "utf-8";
 
-/* @font-face {
+@font-face {
 	font-family:"ns";
 	font-style:normal;
 	font-weight:400;
-	src:url("../font/NotoSans-Regular.woff2") format("woff"),
-	url("../font/NotoSans-Regular.woff") format("woff")
+	src:url("./font/NotoSans-Regular.woff2") format("woff"),
+	url("./font/NotoSans-Regular.woff") format("woff")
 }
 
 @font-face {
 	font-family:"nsm";
 	font-style:normal;
 	font-weight:500;
-	src:url("../font/NotoSans-Medium.woff2") format("woff"),
-	url("../font/NotoSans-Medium.woff") format("woff")
+	src:url("./font/NotoSans-Medium.woff2") format("woff"),
+	url("./font/NotoSans-Medium.woff") format("woff")
 }
 
 @font-face {
 	font-family:"nsb";
 	font-style:normal;
 	font-weight:700;
-	src:url("../font/NotoSans-Bold.woff2") format("woff"),
-	url("../font/NotoSans-Bold.woff") format("woff")
-} */
-
+	src:url("./font/NotoSans-Bold.woff2") format("woff"),
+	url("./font/NotoSans-Bold.woff") format("woff")
+}
 
 
 /* Reset */

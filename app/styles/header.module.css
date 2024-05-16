@@ -1,3 +1,187 @@
-.nav {
+/* .nav {
     background-color: red;;
+} */
+
+
+.font_puple {
+    color: #5f0080;
 }
+
+.header_shadow {
+    width: 100%;
+    padding-bottom: 50px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 3px 4px 0px;
+}
+
+.header_wrap {
+    position: relative;
+    width: 1050px;
+    height: 100px;
+    margin: 0px auto;
+   
+}
+
+.top_info {
+    position: absolute;
+    right:0;
+    top: 5px;
+}
+
+.top_info ul {
+    display: flex;
+}
+
+.top_info ul li a {
+    font-family:"ns";
+    font-size: 12px;
+}
+
+.top_info ul li ~ li {
+    position: relative;
+    padding-left: 13px;
+    margin-left: 13px;
+}
+
+.top_info ul li ~ li:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 1px;
+    height: 13px;
+    background-color: rgb(217, 217, 217);
+}
+
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 36px;
+}
+
+.input_area {
+    width: 400px;
+    position: relative;
+}
+
+.search_input {
+    width: 100%;
+    height: 48px !important;
+    padding-left: 14px;
+    padding-right: 40px !important;
+    border: 1px solid #5f0080;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: rgb(247, 247, 247) 0px 0px 0px 1px inset;
+}
+
+.search_input:focus {
+    border-color: #5f0080;
+}
+
+
+.search_btn {
+    position: absolute;
+    right: 10px;
+    top:5px;
+    width: 30px;
+    height: 30px;
+    bottom: 3px;
+    text-indent: -9999em;
+    background: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715824562/hob0fmjx0yulhgkt5jdz.svg') 0px 0px no-repeat;
+}
+
+.icon_area {
+    display: flex;
+}
+
+.icon_area button,
+.icon_area a {
+    display: block;
+    width: 36px;
+    height: 36px;
+    text-indent: -9999em;
+}
+
+.icon_area li ~ li {
+    margin-left: 20px;
+} 
+
+.delivery button {
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825372/cvzppotysoga7fuk7n4u.svg');
+}
+
+.delivery:hover button {
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825494/jyxsdgsohnsucbqxqmvg.svg');
+}
+
+.heart a {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825639/uxfch3yh0qw3f8gnkpve.svg');
+}
+
+.heart:hover a {
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825640/or2fynoekvi7rvdxwrgj.svg');
+}
+
+.cart a {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825865/ho1imlo5vlv6zsnrqocc.svg');
+}
+
+.cart:hover a {
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825865/uvmhwkyib2xhjzw393vf.svg');
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.bottom ul {
+    display: flex;
+}
+
+.bottom ul a {
+    display: block;
+    width: 150px;
+    text-align: center;
+}
+
+.bottom ul a:hover {
+    color: #5f0080;
+    text-decoration: underline;
+}
+
+.cate_btn {
+    padding-left: 25px;
+    background:url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715826703/mif23ibcxp9k4fx2nudw.svg') no-repeat left center;
+}
+
+.cate_btn:hover {
+    color: #5f0080;
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715826703/kcfd0ss1je9inr9aa8na.svg');
+}
+
+.delivery_info {
+    height: 32px;
+    padding: 6px 16px;
+    border-radius: 18px;
+    border: 1px solid #eee;
+    line-height: 15px;
+    letter-spacing: -0.32px;
+}
+
+.delivery_info a {
+    color: #666;
+    font-size: 13px;
+}
+

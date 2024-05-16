@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Moive from "../components/movie";
 import styles from "../styles/movie-list.module.css";
+import MainBanner from "../components/main-banner";
 
 export const metadata = {
   title: "Home",
@@ -17,17 +18,19 @@ async function getMovies() {
 }
 
 export default async function HomePage() {
-  const movies = await getMovies();
+  // const movies = await getMovies();
   return (
-    <ul className={styles.movie_list}>
-      {movies.map(movie => (
-        <Moive
-          key={movie.id}
-          id={movie.id}
-          poster_path={movie.poster_path}
-          title={movie.title}
-        />
-      ))}
-    </ul>
+    <MainBanner/>
+    // <div>sad</div>
+    // <ul className={styles.movie_list}>
+    //   {movies.map(movie => (
+    //     <Moive
+    //       key={movie.id}
+    //       id={movie.id}
+    //       poster_path={movie.poster_path}
+    //       title={movie.title}
+    //     />
+    //   ))}
+    // </ul>
   )
 }
