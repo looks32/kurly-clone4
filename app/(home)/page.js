@@ -5,6 +5,7 @@ import styles from "../styles/movie-list.module.css";
 import MainBanner from "../components/main-banner";
 import MainTitle from "../components/main-title";
 import AdArea from "../components/ad-area";
+import SpecialGoods from "../components/special-goods";
 
 
 import GoodsSlider from "../components/goods-slider";
@@ -39,6 +40,12 @@ export default async function HomePage() {
         <GoodsSlider/>
 
         <AdArea adImg="https://res.cloudinary.com/dup3ee8is/image/upload/v1715836598/ad1.png"/>
+
+        <SpecialGoods tit="일일특가" subText="24시간 한정! 최저가 특가⏰" lastText="망설이면 늦어요!"/>
+
+        <SpecialGoods tit="🎉뷰컬페 일일특가" subText="24시간 한정 초특가 보장🔥" lastText="망설이면 늦어요!"/>
+
+        <SpecialGoods tit="✨최저가 도전" subText="놓칠 수 없는 기회!" lastText="망설이면 늦어요!"/>
 
         <AdArea adImg="https://res.cloudinary.com/dup3ee8is/image/upload/v1715836598/ad2.png"/>
 

@@ -1,10 +1,14 @@
 .goods_wrap {
-    width: 249px; /* 임시 */
+    /* width: 249px; 임시 */
 }
 
 .img_area,
 .img_area img {
     border-radius: 4px;
+}
+
+.img_area img {
+    width: 100%;
 }
 
 .add_cart {

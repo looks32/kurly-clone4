@@ -1,0 +1,43 @@
+.goods_wrap {
+    display: flex;
+    margin-top: 120px;
+}
+
+.text_area {
+    width: 356px;
+}
+
+.text_area strong {
+    display: block;
+    font-size: 28px;
+    font-family: 'ns';
+}
+
+.text_area .sub_text {
+    display: block;
+    margin-top: 11px;
+    color: #999;
+}
+
+.clock_area {
+    display: flex;
+    align-items: center;
+    margin-top:24px;
+}
+
+.text_area .clock {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.text_area .last_text {
+    margin-top: 26px;
+    font-size: 14px;
+    color: #ccc;
+
+}
+
+.goods_list {
+    width: calc(100% - 356px);
+}
