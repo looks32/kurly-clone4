@@ -21,7 +21,7 @@ export default function GoodsSlider(props) {
       
       {props.goods && props.goods.filter((slide) => slide.cate === props.cate).map((slide) => (
           <SwiperSlide key={slide.id}>          
-            <Goods poster={slide.poster} text={slide.text} before={slide.before} per={slide.per} price={slide.price} review={slide.review}/>
+            <Goods id={slide.id} poster={slide.poster} text={slide.text} before={slide.before} per={slide.per} price={slide.price} review={slide.review}/>
           </SwiperSlide>
         ))}
     </Swiper>

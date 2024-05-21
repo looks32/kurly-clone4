@@ -4,12 +4,18 @@ import MovieInfo, { getMovie } from "../../components/movie-info";
 import MovieVideos from "../../components/movie-videos";
 import { Suspense } from "react";
 
-export async function generateMetadata({ params: { id } }) {
-    const movie = await getMovie(id);
-    return {
-      title: movie.title,
-    };
-  }
+// export async function generateMetadata({ params: { id } }) {
+//     const movie = await getMovie(id);
+//     return {
+//       title: movie.title,
+//     };
+//   }
+
+export const metadata = {
+    title: "Goods",
+  };
+
+import goods from "../../json/goods-slider.json";
 
 export default async function Goods({params:{id}}){
     //const movie = await getMovie(id);
@@ -25,12 +31,15 @@ export default async function Goods({params:{id}}){
             {/*
                 아래의 Suspense 를 이용하면 각자 로딩 제어가 가능하고 각자 불러오기 때문에 화면이 비어지는 시간이 적다.
             */}
-            <Suspense fallback={<h1>Loading movie info</h1>}>
+            {/* <Suspense fallback={<h1>Loading movie info</h1>}>
                 <MovieInfo id={id}/>
             </Suspense>
             <Suspense fallback={<h1>Loading movie videos</h1>}>
                 <MovieVideos id={id}/>
-            </Suspense>
+            </Suspense> */}
+            <img src={goods[id-1].poster} alt={goods[id-1].text}/>
+            <div>{goods[id-1].text}</div>
+            <strong>{goods[id-1].price} 원</strong>
         </>
     )
 }

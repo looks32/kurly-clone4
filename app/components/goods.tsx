@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function Goods(props) {
   return (
     <div className={styles.goods_wrap}>
-        <Link href="#;;">
+        <Link href={`/goods/${props.id}`}>
             <div className={styles.img_area}>
                 <img src={props.poster} alt={props.text}/>
             </div>

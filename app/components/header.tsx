@@ -13,13 +13,13 @@ export default function Header(){
                 <div className={styles.top_info}>
                     <ul>
                         <li>
-                            <Link href="#;;" className={styles.font_puple}>회원가입</Link>
+                            <Link href="#none" className={styles.font_puple}>회원가입</Link>
                         </li>
                         <li>
                             <Link href="/login">로그인</Link>
                         </li>
                         <li>
-                            <Link href="#;;">고객센터</Link>
+                            <Link href="#none">고객센터</Link>
                         </li>
                     </ul>
                 </div>
@@ -38,10 +38,10 @@ export default function Header(){
                             <button>배송지</button>
                         </li>
                         <li className={styles.heart}>
-                            <Link href="#;;">관심</Link>
+                            <Link href="#none">관심</Link>
                         </li>
                         <li className={styles.cart}>
-                            <Link href="#;;">장바구니</Link>
+                            <Link href="#none">장바구니</Link>
                         </li>
                     </ul>
                 </div>
@@ -51,20 +51,20 @@ export default function Header(){
                     </div>
                     <ul>
                         <li>
-                            <Link href="#;;">신상품</Link>
+                            <Link href="#none">신상품</Link>
                         </li>
                         <li>
-                            <Link href="#;;">베스트</Link>
+                            <Link href="#none">베스트</Link>
                         </li>
                         <li>
-                            <Link href="#;;">알뜰쇼핑</Link>
+                            <Link href="#none">알뜰쇼핑</Link>
                         </li>
                         <li>
-                            <Link href="#;;">특가/혜택</Link>
+                            <Link href="#none">특가/혜택</Link>
                         </li>
                     </ul>
                     <div className={styles.delivery_info}>
-                        <Link href="#;;"><span className={styles.font_puple}>샛별·하루</span> 배송안내</Link>
+                        <Link href="#none"><span className={styles.font_puple}>샛별·하루</span> 배송안내</Link>
                     </div>
                 </div>
             </div>

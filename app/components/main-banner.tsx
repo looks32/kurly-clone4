@@ -92,7 +92,7 @@ export default function MainBanner() {
     >
       {slideCont && slideCont.map((slide) => (
           <SwiperSlide key={slide.id}>
-            <Link href="#;">
+            <Link href={`/event/${slide.id}`}>
               <img src={slide.poster} alt={slide.text} />
             </Link>
           </SwiperSlide>
