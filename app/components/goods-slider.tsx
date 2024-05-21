@@ -18,7 +18,6 @@ export default function GoodsSlider(props) {
       slidesPerView={4}
       slidesPerGroup={4}
     >
-      
       {props.goods && props.goods.filter((slide) => slide.cate === props.cate).map((slide) => (
           <SwiperSlide key={slide.id}>          
             <Goods id={slide.id} poster={slide.poster} text={slide.text} before={slide.before} per={slide.per} price={slide.price} review={slide.review}/>

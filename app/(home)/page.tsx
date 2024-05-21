@@ -42,11 +42,11 @@ export default async function HomePage() {
 
         <AdArea adImg="https://res.cloudinary.com/dup3ee8is/image/upload/v1715836598/ad1.png" url="http://www.naver.com"/>
 
-        <SpecialGoods tit="일일특가" subText="24시간 한정! 최저가 특가⏰" lastText="망설이면 늦어요!" goods={goods} cate="food" id="1" />
+        <SpecialGoods tit="일일특가" subText="24시간 한정! 최저가 특가⏰" lastText="망설이면 늦어요!" goods={goods} today="special" />
 
-        <SpecialGoods tit="🎉뷰컬페 일일특가" subText="24시간 한정 초특가 보장🔥" lastText="망설이면 늦어요!"/>
+        <SpecialGoods tit="🎉뷰컬페 일일특가" subText="24시간 한정 초특가 보장🔥" lastText="망설이면 늦어요!" goods={goods} today="beauty"/>
 
-        <SpecialGoods tit="✨최저가 도전" subText="놓칠 수 없는 기회!" lastText="망설이면 늦어요!"/>
+        <SpecialGoods tit="✨최저가 도전" subText="놓칠 수 없는 기회!" lastText="망설이면 늦어요!" goods={goods} today="low"/>
 
         <AdArea adImg="https://res.cloudinary.com/dup3ee8is/image/upload/v1715836598/ad2.png"  url="http://www.daum.net"/>
 
