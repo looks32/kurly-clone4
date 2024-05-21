@@ -6,22 +6,21 @@ import MainBanner from "../components/main-banner";
 import MainTitle from "../components/main-title";
 import AdArea from "../components/ad-area";
 import SpecialGoods from "../components/special-goods";
-
-
 import GoodsSlider from "../components/goods-slider";
 
 import goods from "../json/goods-slider.json";
+import { API_URL } from "../api/movie-api";
 
 export const metadata = {
   title: "Home",
 };
 
-export const API_URL = "https://nomad-movies.nomadcoders.workers.dev/movies";
 
 async function getMovies() {
   //await new Promise((resolve) => setTimeout(resolve, 10000)); // 강제 로딩
   const response = await fetch(API_URL);
   const json = await response.json();
+  console.log(json)
   return json;
 }
 
