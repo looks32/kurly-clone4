@@ -187,3 +187,13 @@ body.fix main {position:fixed; width:100%; height:100%}
 .ad_area {margin-top: 90px;}
 
 .main_inner {width: 1050px; margin: 0px auto;}
+
+.swiper-prev,
+.swiper-next {
+	opacity: 0;
+}
+
+.swiper:hover .swiper-prev,
+.swiper:hover .swiper-next {
+	opacity: 1;
+}

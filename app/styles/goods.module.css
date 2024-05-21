@@ -37,6 +37,11 @@
     margin-top: 8px;
     margin-bottom: 8px;
     font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
 .dimmed {
@@ -51,10 +56,10 @@
 
 .per {
     color: #fa622f;
+    margin-right: 7px;
 }
 
 .real {
-    margin-left: 7px;
     font-weight: bold;
 }
 

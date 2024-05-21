@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="ko">
       <body>
         <Header/>
-        {children}
+          {children}
         <TopBtn/>
       </body>
     </html>

@@ -16,8 +16,8 @@ export default function Login() {
         <input type="text" placeholder="아이디를 입력해주세요" />
         <input type="password" placeholder="비밀번호를 입력해주세요" />
         <div className={styles.Link_area}>
-          <Link href="#none;">아이디 찾기</Link>
-          <Link href="#none;">비밀번호 찾기</Link>
+          <Link href="#;;">아이디 찾기</Link>
+          <Link href="#;;">비밀번호 찾기</Link>
         </div>
         <div className={styles.btn_area}>
           <Btn tit="로그인" color="basic"/>

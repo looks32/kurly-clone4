@@ -10,6 +10,8 @@ import SpecialGoods from "../components/special-goods";
 
 import GoodsSlider from "../components/goods-slider";
 
+import goods from "../json/goods-slider.json";
+
 export const metadata = {
   title: "Home",
 };
@@ -33,11 +35,11 @@ export default async function HomePage() {
 
         <MainTitle mainTit="🛒지금 가장 많이 담는 특가" subTit="컬리 추천 특가템 최대 30%"/>
 
-        <GoodsSlider/>
+        <GoodsSlider goods={goods} cate="food"/>
 
         <MainTitle mainTit="🏅뷰컬페에서 가장 인기있어요" subTit="지금 뷰티컬리는 최대 85% 빅세일 중!"/>
 
-        <GoodsSlider/>
+        <GoodsSlider goods={goods} cate="beauty"/>
 
         <AdArea adImg="https://res.cloudinary.com/dup3ee8is/image/upload/v1715836598/ad1.png"/>
 

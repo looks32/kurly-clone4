@@ -1,0 +1,238 @@
+[
+    {
+      "id": "1",
+      "text": "[부침명장] 한입아삭 김치전",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods1.jpg",
+      "before" : "7,800",
+      "per" : "15",
+      "price" : "6,630",
+      "review" : "1,434",
+      "cate" : "food"
+    },
+    {
+      "id": "2",
+      "text": "[마더푸드] 오리지널 쪽갈비",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods2.jpg",
+      "before" : "6,700",
+      "per" : "30",
+      "price" : "4,690",
+      "review" : "235",
+      "cate" : "food"
+    },
+    {
+      "id": "3",
+      "text": "당도선별 성주 참외 1.5kg (4~7입)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods3.jpg",
+      "before" : "11,900",
+      "per" : "24",
+      "price" : "8,980",
+      "review" : "1,736",
+      "cate" : "food"
+    },
+    {
+      "id": "4",
+      "text": "[외계인방앗간] 우리쌀 모닝빵 3종",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods4.jpg",
+      "before" : "55,600",
+      "per" : "57",
+      "price" : "23,600",
+      "review" : "4,457",
+      "cate" : "food"
+    },
+    {
+      "id": "5",
+      "text": "[올면] 속초식 명태 회냉면 2인분",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods5.jpg",
+      "before" : "12,000",
+      "per" : "5",
+      "price" : "11,400",
+      "review" : "12",
+      "cate" : "food"
+    },
+    {
+      "id": "6",
+      "text": "[바른식] 부산 조방낙지 낙곱새 (2인분)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods6.jpg",
+      "price" : "18,300",
+      "review" : "3,234",
+      "cate" : "food"
+    },
+    {
+      "id": "7",
+      "text": "[전주 베테랑] 칼국수",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods7.jpg",
+      "before" : "5,900",
+      "per" : "9",
+      "price" : "5,325",
+      "review" : "735",
+      "cate" : "food"
+    },
+    {
+      "id": "8",
+      "text": "[연안식당] 부추 꼬막 비빔장",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods8.jpg",
+      "before" : "6,900",
+      "per" : "15",
+      "price" : "5,800",
+      "review" : "8,334",
+      "cate" : "food"
+    },
+    {
+      "id": "9",
+      "text": "[제니쿠키] 쿠키 2종 (택1)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods9.jpg",
+      "price" : "27,800",
+      "review" : "992",
+      "cate" : "food"
+    },
+    {
+      "id": "10",
+      "text": "[이연복의 목란] 짬뽕 2인분 (맵기선택)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods10.jpg",
+      "before" : "13,800",
+      "per" : "7",
+      "price" : "12,834",
+      "review" : "1,222",
+      "cate" : "food"
+    },
+    {
+      "id": "11",
+      "text": "[스윗밸런스] 오늘의 샐러드 10종 (리뉴얼) (택1)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods11.jpg",
+      "before" : "4,900",
+      "per" : "78",
+      "price" : "4,557",
+      "review" : "452",
+      "cate" : "food"
+    },
+    {
+      "id": "12",
+      "text": "[프레시지] 부채살 하와이안 찹스테이크",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods12.jpg",
+      "before" : "11,900",
+      "per" : "16",
+      "price" : "9,996",
+      "review" : "4,234",
+      "cate" : "food"
+    },
+    {
+      "id": "13",
+      "text": "[닥터아토] 실키 포켓 선스틱 17g",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods13.jpg",
+      "before" : "23,900",
+      "per" : "62",
+      "price" : "8,900",
+      "review" : "988",
+      "cate" : "beauty"
+    },
+    {
+      "id": "14",
+      "text": "[김정문알로에] 큐어 워터 스플래쉬 쿨링 선스틱",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods14.jpg",
+      "before" : "15,900",
+      "per" : "31",
+      "price" : "10,900",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "15",
+      "text": "[닥터브로너스] 퓨어 캐스틸 솝 950ml 12종",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods15.jpg",
+      "before" : "33,000",
+      "per" : "25",
+      "price" : "24,750",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "16",
+      "text": "[헤라] New 블랙 쿠션 파운데이션 (리필 포함 7종) (택1)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods16.jpg",
+      "before" : "74,000",
+      "per" : "10",
+      "price" : "66,600",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "17",
+      "text": "[라로슈포제] 시카플라스트 밤 B5+ 2종 (택1) (마이뷰티박스 가입일 구매 시 +3% 적립)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods17.jpg",
+      "before" : "39,000",
+      "per" : "10",
+      "price" : "35,100",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "18",
+      "text": "[말콤] 약산성 알러지프리 바디워시 11종 (택1)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods18.jpg",
+      "before" : "20,000",
+      "per" : "70",
+      "price" : "5,900",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "19",
+      "text": "[에끌라두] 골든 샌달 우드 괄사 (페이스&두피 마시지 툴)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods19.jpg",
+      "before" : "29,000",
+      "per" : "65",
+      "price" : "9,900",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "20",
+      "text": "[AHC] 마이크로 착붙 마스트 10매 4종 (택1)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods20.jpg",
+      "before" : "30,000",
+      "per" : "56",
+      "price" : "12,900",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "21",
+      "text": "[닥터지] 레드블레미쉬 클리어 수딩크림 2세대 50ml 듀오 기프트 세트",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods21.jpg",
+      "before" : "62,000",
+      "per" : "60",
+      "price" : "24,700",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "22",
+      "text": "[랑콤] UV 엑스퍼트 선크림 50ml 4종 (택1) (선크림10mlx5ea 본품동일 50ml 추가증정 )(마이뷰티박스 가입일 구매 시 +3% 적립)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods22.jpg",
+      "before" : "98,900",
+      "per" : "31",
+      "price" : "83,300",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "23",
+      "text": "[켄트] 오리지널 치약 120g 3개입",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods23.jpg",
+      "before" : "16,500",
+      "per" : "27",
+      "price" : "11,900",
+      "review" : "334",
+      "cate" : "beauty"
+    },
+    {
+      "id": "24",
+      "text": "[엄마의 목욕탕 레시피] 바디 필링패드 8매입 3종 (택1)",
+      "poster" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1715842551/goods24.jpg",
+      "before" : "24,000",
+      "per" : "42",
+      "price" : "13,900",
+      "review" : "334",
+      "cate" : "beauty"
+    }
+  ]

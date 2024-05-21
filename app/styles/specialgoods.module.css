@@ -39,5 +39,10 @@
 }
 
 .goods_list {
+    display: flex;
     width: calc(100% - 356px);
+}
+
+.goods_list > div ~ div {
+    margin-left: 10px;
 }
