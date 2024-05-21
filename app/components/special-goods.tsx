@@ -16,8 +16,9 @@ clock}>00:36:36</span>
             <p className={styles.last_text}>{props.lastText}</p>
         </div>
         <div className={styles.goods_list}>
-            <Goods/>
-            <Goods/>
+            {props.goods && props.goods.filter((slide) => slide.id === props.id).map((slide) => (
+              <Goods text={slide.text} poster={slide.poster} per={slide.per} price={slide.price} review={slide.review}/>
+            ))}
         </div>
     </div>
   );

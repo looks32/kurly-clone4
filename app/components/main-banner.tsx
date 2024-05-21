@@ -23,7 +23,7 @@ const PrevArrow = styled.button`
   text-indent: -9999em;
   transition: all 0.5s ease 0s;
   opacity: 0;
-  background: url(https://res.cloudinary.com/dup3ee8is/image/upload/v1716256451/banner_arrow.svg) 50% 50% no-repeat;
+  background: url(https://res.cloudinary.com/dup3ee8is/image/upload/v1716256451/icon/banner_arrow.svg) 50% 50% no-repeat;
   transform: rotate(180deg);
 `
 
@@ -39,7 +39,7 @@ const NextArrow = styled.button`
   text-indent: -9999em;
   transition: all 0.5s ease 0s;
   opacity: 0;
-  background: url(https://res.cloudinary.com/dup3ee8is/image/upload/v1716256451/banner_arrow.svg) 50% 50% no-repeat;
+  background: url(https://res.cloudinary.com/dup3ee8is/image/upload/v1716256451/icon/banner_arrow.svg) 50% 50% no-repeat;
   transform: rotate(0deg);
 `
 

@@ -89,7 +89,7 @@
     height: 30px;
     bottom: 3px;
     text-indent: -9999em;
-    background: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715824562/hob0fmjx0yulhgkt5jdz.svg') 0px 0px no-repeat;
+    background: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715824562/icon/search.svg') 0px 0px no-repeat;
 }
 
 .icon_area {
@@ -112,31 +112,31 @@
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825372/cvzppotysoga7fuk7n4u.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825372/icon/delivery.svg');
 }
 
 .delivery:hover button {
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825494/jyxsdgsohnsucbqxqmvg.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825494/icon/delivery_active.svg');
 }
 
 .heart a {
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825639/uxfch3yh0qw3f8gnkpve.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825639/icon/heart.svg');
 }
 
 .heart:hover a {
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825640/or2fynoekvi7rvdxwrgj.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825640/icon/heart_active.svg');
 }
 
 .cart a {
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825865/ho1imlo5vlv6zsnrqocc.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825865/icon/cart.svg');
 }
 
 .cart:hover a {
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825865/uvmhwkyib2xhjzw393vf.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715825865/icon/cart_active.svg');
 }
 
 
@@ -163,12 +163,12 @@
 
 .cate_btn {
     padding-left: 25px;
-    background:url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715826703/mif23ibcxp9k4fx2nudw.svg') no-repeat left center;
+    background:url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715826703/icon/cate_menu.svg') no-repeat left center;
 }
 
 .cate_btn:hover {
     color: #5f0080;
-    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715826703/kcfd0ss1je9inr9aa8na.svg');
+    background-image: url('https://res.cloudinary.com/dup3ee8is/image/upload/v1715826703/icon/cate_menu_active.svg');
 }
 
 .delivery_info {

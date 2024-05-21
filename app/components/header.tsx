@@ -26,7 +26,7 @@ export default function Header(){
                 <div className={styles.middle}>
                     <h1>
                         <Link href="/">
-                            <img src="https://res.cloudinary.com/dup3ee8is/image/upload/v1715824440/sgo40imjy5cdx0vz5nl6.svg" alt="컬리마켓 로고" />
+                            <img src="https://res.cloudinary.com/dup3ee8is/image/upload/v1715824440/logo.svg" alt="컬리마켓 로고" />
                         </Link>
                     </h1>
                     <div className={styles.input_area}>
