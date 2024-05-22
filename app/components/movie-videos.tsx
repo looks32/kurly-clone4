@@ -1,4 +1,4 @@
-import { API_URL } from "../api/movie-api";
+import { API_URL  } from "../api/movie-api";
 
 
 async function getVideos(id){
