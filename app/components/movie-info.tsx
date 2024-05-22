@@ -1,4 +1,4 @@
-import { API_URL } from "../(home)/page";
+import { API_URL } from "../api/movie-api";
 
 
 export async function getMovie(id) {
