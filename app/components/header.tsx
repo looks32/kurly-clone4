@@ -13,7 +13,7 @@ export default function Header(){
                 <div className={styles.top_info}>
                     <ul>
                         <li>
-                            <Link href="#none" className={styles.font_puple}>회원가입</Link>
+                            <Link href="/join" className={styles.font_puple}>회원가입</Link>
                         </li>
                         <li>
                             <Link href="/login">로그인</Link>

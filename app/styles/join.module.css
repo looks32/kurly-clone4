@@ -1,0 +1,60 @@
+.join_wrap {
+    width: 640px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.join_inner {
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #333;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.join_wrap h2 {
+    margin: 60px 0 50px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.join_wrap input {
+    height: 46px;
+    line-height: 46px;
+}
+
+.join_wrap ul li {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.join_wrap ul li label {
+    display: block;
+    width: 140px;
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+.join_wrap ul li > div {
+    display: flex;
+    width: calc(100% - 140px);
+}
+
+.join_wrap ul li > div input {
+    width: 333px;
+}
+
+.join_wrap ul li > div button {
+    width: 120px;
+    height: 46px;
+    line-height: 1;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+
+.btn_area button {
+    width: 240px;
+    margin: 0 auto;
+}
