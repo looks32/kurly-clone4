@@ -13,5 +13,5 @@ export default function Btn(props) {
         style = styles.white;
     }
 
-  return <button className={`${style} ${styles.btn}`}>{props.tit}</button>;
+  return <button className={`${style} ${styles.btn}`} type={props.type}>{props.tit}</button>;
 }
