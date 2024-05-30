@@ -30,7 +30,7 @@ export default async function Header(){
         "use server";
         const session = await getSession();
         // seetion을 삭제하고 홈으로 보낸다.
-        await session.destroy();
+        session.destroy();
         redirect('/');
     }
 
