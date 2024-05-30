@@ -35,7 +35,7 @@ export default function Login() {
         </div>
         <div className={styles.btn_area}>
           <Btn tit="로그인" color="basic"/>
-          <BtnLink tit="회원가입" color="white" type="button" link="/"/>
+          <BtnLink tit="회원가입" color="white" type="button" link="/join"/>
         </div>
       </form>
     </div>

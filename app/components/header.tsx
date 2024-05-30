@@ -1,19 +1,50 @@
-"use client";   
+// "use client";   
 
 import Link from "next/link";
 import styles from "../styles/header.module.css";
-import { usePathname } from "next/navigation";
+import { notFound, redirect, usePathname } from "next/navigation";
+import getSession from "../lib/session";
+import db from "../lib/db";
+
+async function getUser(){
+    const session = await getSession()
+    if(session.id){
+        const user = await db.user.findUnique({
+            where:{
+                id : session.id
+            }
+        });
+        if (user) {
+            return user;
+        }
+    }
+    //notFound(); // section이 없으면 notfound 페이지로 보내준다 (근데 안됨;)
+}
 
 
-export default function Header(){
-    const path = usePathname();
+export default async function Header(){
+
+    const user = await getUser();
+
+    const logOut = async () => {
+        "use server";
+        const session = await getSession();
+        // seetion을 삭제하고 홈으로 보낸다.
+        await session.destroy();
+        redirect('/');
+    }
+
+    // export default function Header(){
+
+    // const path = usePathname();
     return (
         <div className={styles.header_shadow}>
             <div className={styles.header_wrap}>
                 <div className={styles.top_info}>
+                    {!user?.username ? 
                     <ul>
                         <li>
-                            <Link href="/join" className={styles.font_puple}>회원가입</Link>
+                            <Link href="/join" className={styles.font_puple}>{user?.username && 'aa'}회원가입</Link>
                         </li>
                         <li>
                             <Link href="/login">로그인</Link>
@@ -22,7 +53,11 @@ export default function Header(){
                             <Link href="#none">고객센터</Link>
                         </li>
                     </ul>
+                    : <form action={logOut}>
+                        <button className={styles.logout}>로그아웃</button>
+                    </form>}
                 </div>
+
                 <div className={styles.middle}>
                     <h1>
                         <Link href="/">

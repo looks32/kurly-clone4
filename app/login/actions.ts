@@ -6,6 +6,7 @@ import { z } from "zod";
 import { PASSWORDREGEX, PASSWORD_MIN_LENGTH, PASSWORD_REGEX_ERROR } from "../lib/constants";
 import db from "../lib/db";
 import getSelection from "../lib/session";
+import { redirect } from "next/navigation";
 
 
 const checkIdExists = async (userid)=>{
@@ -54,18 +55,24 @@ export async function login(prevState:any, formData: FormData){
         })
 
         // 암호화 된 비밀번호 매칭
-        const ok = await bcrypt.compare(result.data.loginPw, user!.password ?? "xxx")
+        const ok = await bcrypt.compare(result.data.loginPw, user!.password ?? "xxx");
+        // ?? "xxx" === user가 password를 가지지 않는다면 "xxx" 와 비교한다 (추후에 수정 예정)
 
         console.log(ok); // bcrypt 확인
 
         if(ok){
             const session = await getSelection();
             session.id = user!.id;
+            // user! 의 의미 : user가 반드시 존재한다는 것을 의미함
             console.log("로그인 완료");
+            await session.save();
+            redirect('/');
         } else {
-            // return fieldErrors :{
-            //     password: ["틀림쓰"]
-            // }
+            return {
+                fieldErrors :{
+                    loginPw: ["비밀번호가 틀립니다. 다시 입력해주세요."]
+                }
+            }
             console.log("error");
         }
         
