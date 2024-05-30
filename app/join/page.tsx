@@ -21,7 +21,7 @@ export default function Join() {
                         <label htmlFor="joinId">아이디</label>
                         <div>
                             <input type="text" name="joinId" id="joinId" placeholder="아이디를 입력해주세요"/>
-                            <Btn tit="중복확인" color="white" type="button"/>
+                            {/* <Btn tit="중복확인" color="white" type="button"/> */}
                         </div>
                         {state?.fieldErrors.joinId && <div className={styles.errors}>{state?.fieldErrors.joinId}</div>}
                     </li>
@@ -50,7 +50,7 @@ export default function Join() {
                         <label htmlFor="joinMail">이메일</label>
                         <div>
                             <input type="text" name="joinMail" id="joinMail" placeholder="예: maketkurly@kurly.com" />
-                            <Btn tit="중복확인" color="white" type="button"/>
+                            {/* <Btn tit="중복확인" color="white" type="button"/> */}
                         </div>
                         {state?.fieldErrors.joinMail && <div className={styles.errors}>{state?.fieldErrors.joinMail}</div>}
                     </li>

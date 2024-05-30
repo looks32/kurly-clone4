@@ -48,6 +48,14 @@
     margin-top: 30px;
 }
 
-.btn_area button ~ button {
+.btn_area a ~ *,
+.btn_area button ~ * {
     margin-top: 10px;
+}
+
+.errors {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: red;
 }

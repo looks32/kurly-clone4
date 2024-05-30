@@ -1,6 +1,7 @@
+import Link from "next/link";
 import styles from "../styles/btn.module.css";
 
-export default function Btn(props) {
+export default function BtnLink(props) {
 
     let style
 
@@ -12,5 +13,5 @@ export default function Btn(props) {
         style = styles.white;
     }
 
-  return <button className={`${style} ${styles.btn}`} type={props.type}>{props.tit}</button>;
+  return <Link href={props.link} className={`${style} ${styles.btn}`} type={props.type}>{props.tit}</Link>;
 }
