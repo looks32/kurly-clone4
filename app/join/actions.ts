@@ -3,7 +3,10 @@
 import {z} from "zod";
 import { PASSWORDREGEX, PASSWORD_MIN_LENGTH } from "../lib/constants";
 import db from "../lib/db";
-
+import bcrypt from "bcrypt";
+import { redirect } from "next/navigation";
+import getSession from "../lib/session";
+import { cookies } from "next/headers";
 
 // function checkJoinId(joinId:string){
 // 	return !joinId.includes('potato')
@@ -110,18 +113,27 @@ export async function createAcccount(prevState:any, formData:FormData){
 		return result.error.flatten(); // error를 return 해줌.
 	} else {
 
-		const userEmail = await db.user.findUnique({
-			where : {
-				email : result.data.joinMail
+		const hashedPassword = await bcrypt.hash(result.data.joinPw,12);
+		console.log(hashedPassword);
+
+		// db저장
+		const user = await db.user.create({
+			data : {
+				userid : result.data.joinId,
+				password : hashedPassword,
+				username : result.data.joinName,
+				email : result.data.joinMail,
+				phone : result.data.joinTel,
 			},
 			select : {
 				id : true
 			}
 		})
 
-		if(userEmail){
-			// 중복임당 (error)
-		}
+		const session = await getSession();
+		session.id = user.id;
+		await session.save();
+		redirect("/");
 
 		//console.log(joinId);
 		// console.log(user);
