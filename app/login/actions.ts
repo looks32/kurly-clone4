@@ -26,10 +26,10 @@ const checkIdExists = async (userid)=>{
 const formSchema = z.object({
     loginId: z.string()
     .toLowerCase()
-    .min(1)
+    .min(1, "아이디를 입력해주세요. ")
     .refine(checkIdExists,"아이디를 다시 확인해주세요."),
     loginPw : z.string({
-        required_error : "비번 입력해주셈"
+        required_error : "비밀번호를 입력해주세요."
     }).min(PASSWORD_MIN_LENGTH, "비밀번호를 최소 4자 이상 작성해주세요. ").regex(PASSWORDREGEX, PASSWORD_REGEX_ERROR)
 })
 
