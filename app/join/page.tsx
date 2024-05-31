@@ -11,7 +11,7 @@ import { useFormStatus } from 'react-dom';
 
 export default function Join() {
 
-  const { pending } = useFormStatus();
+//   const { pending } = useFormStatus();
 
   const [state, dispatch] = useFormState(createAcccount, null);
 
@@ -68,7 +68,7 @@ export default function Join() {
                 </ul>
             </div>
             <div className={styles.btn_area}>
-                {pending ? 'loading' : 'no-loading'}
+                {state ? 'loading' : 'no-loading'}
                 <Btn tit="가입하기" color="basic"/>
             </div>  
         </form>      
