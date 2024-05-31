@@ -17,5 +17,5 @@ export default function Btn(props) {
         style = styles.white;
     }
 
-  return <button className={`${style} ${styles.btn}`} type={props.type} disabled={pending}>{props.tit}</button>;
+  return <button className={`${style} ${styles.btn}`} type={props.type} disabled={pending}>{pending ? 'loading' : props.tit}</button>;
 }

@@ -7,6 +7,12 @@
     border: 1px solid #5f0080;
 }
 
+.btn:disabled {
+    cursor: wait;
+    background-color: #eee;
+    border-color: #eee;
+}
+
 .basic {
     background-color: #5f0080;
     border-color: #5f0080;
