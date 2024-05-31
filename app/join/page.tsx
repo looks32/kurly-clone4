@@ -69,7 +69,7 @@ export default function Join() {
             </div>
             <div className={styles.btn_area}>
                 {state ? 'loading' : 'no-loading'}
-                <Btn tit="가입하기" color="basic"/>
+                <Btn tit="가입하기" color="basic" disabled={state}/>
             </div>  
         </form>      
     </div>

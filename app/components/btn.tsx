@@ -1,6 +1,11 @@
-import styles from "../styles/btn.module.css";
+"use client";
 
+import styles from "../styles/btn.module.css";
+import { useFormStatus } from 'react-dom';
+    
 export default function Btn(props) {
+
+    const { pending } = useFormStatus();
 
     let style
 
@@ -12,5 +17,5 @@ export default function Btn(props) {
         style = styles.white;
     }
 
-  return <button className={`${style} ${styles.btn}`} type={props.type}>{props.tit}</button>;
+  return <button className={`${style} ${styles.btn}`} type={props.type} disabled={pending}>{props.tit}</button>;
 }
