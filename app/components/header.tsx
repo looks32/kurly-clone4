@@ -1,42 +1,23 @@
-// "use client";   
+"use client";
 
 import Link from "next/link";
 import styles from "../styles/header.module.css";
-import { notFound, redirect, usePathname } from "next/navigation";
-import getSession from "../lib/session";
+
 import db from "../lib/db";
+import { logOut } from "../lib/logout";
+import { useState } from "react";
 
-async function getUser(){
-    const session = await getSession()
-    if(session.id){
-        const user = await db.user.findUnique({
-            where:{
-                id : session.id
-            }
-        });
-        if (user) {
-            return user;
-        }
-    }
-    //notFound(); // section이 없으면 notfound 페이지로 보내준다 (근데 안됨;)
-}
-
-
-export default async function Header(){
-
-    const user = await getUser();
-
-    const logOut = async () => {
-        "use server";
-        const session = await getSession();
-        // seetion을 삭제하고 홈으로 보낸다.
-        session.destroy();
-        redirect('/');
-    }
+export default  function Header({user}){
 
     // export default function Header(){
-
     // const path = usePathname();
+
+    const [word, setWord] = useState('');
+
+    const searchWord = async (e) => {
+        setWord(e.target.value)
+    }
+
     return (
         <div className={styles.header_shadow}>
             <div className={styles.header_wrap}>
@@ -65,7 +46,8 @@ export default async function Header(){
                         </Link>
                     </h1>
                     <div className={styles.input_area}>
-                        <input type="text" placeholder="검색어를 입력해주세요" className={styles.search_input} />
+                        <input type="text" placeholder="검색어를 입력해주세요" className={styles.search_input} value={word} onChange={searchWord}/>
+                        {word}
                         <button className={styles.search_btn}>검색</button>
                     </div>
                     <ul className={styles.icon_area}>

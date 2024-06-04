@@ -24,7 +24,12 @@ async function getMovies() {
   return json;
 }
 
+
+
 export default async function HomePage() {
+
+  
+
   // const movies = await getMovies();
   return (
     <div>

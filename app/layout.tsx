@@ -2,6 +2,7 @@ import "./styles/reset.css";
 import Header from "./components/header";
 import TopBtn from "./components/top-btn";
 import { Metadata } from "next";
+import { getUser } from "./lib/getuser";
 
 export const metadata = {
   title: {
@@ -11,11 +12,14 @@ export const metadata = {
   description: "컬리마켓 클론 사이트입니다.",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+
+  const user = await getUser();
+
   return (
     <html lang="ko">
       <body>
-        <Header/>
+        <Header user={user}/>
           {children}
         <TopBtn/>
       </body>
