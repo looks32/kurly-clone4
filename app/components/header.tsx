@@ -6,7 +6,7 @@ import styles from "../styles/header.module.css";
 import db from "../lib/db";
 import { logOut } from "../lib/logout";
 import { useState } from "react";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 
 export default  function Header({user}){
 
@@ -19,11 +19,15 @@ export default  function Header({user}){
         setWord(e.target.value)
     }
 
-    // const router = useRouter();
+    const router = useRouter();
 
-    // function aa(){
-    //     router.push(`/search`);
-    // }
+    function searchGo(event){
+        event.preventDefault();
+        const name = event.target.search.value; // 폼 입력 값 가져오기
+        router.push(`/search?name=${encodeURIComponent(name)}`);
+
+        setWord('');
+    }
 
     return (
         <div className={styles.header_shadow}>
@@ -54,9 +58,9 @@ export default  function Header({user}){
                             <img src="https://res.cloudinary.com/dup3ee8is/image/upload/v1715824440/logo.svg" alt="컬리마켓 로고" />
                         </Link>
                     </h1>
-                    <form className={styles.input_area}>
-                        <input type="text" placeholder="검색어를 입력해주세요" className={styles.search_input} value={word} onChange={searchWord}/>
-                        <button className={styles.search_btn} onSubmit={(e)=>{setWord("")}}>검색</button>
+                    <form className={styles.input_area} onSubmit={searchGo}>
+                        <input type="text" placeholder="검색어를 입력해주세요"  name="search" className={styles.search_input} value={word} onChange={searchWord}/>
+                        <button className={styles.search_btn}>검색</button>
                     </form>
                     <ul className={styles.icon_area}>
                         <li className={styles.delivery}>
