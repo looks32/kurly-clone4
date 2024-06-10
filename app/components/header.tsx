@@ -6,6 +6,7 @@ import styles from "../styles/header.module.css";
 import db from "../lib/db";
 import { logOut } from "../lib/logout";
 import { useState } from "react";
+// import { useRouter } from "next/navigation";
 
 export default  function Header({user}){
 
@@ -17,6 +18,12 @@ export default  function Header({user}){
     const searchWord = async (e) => {
         setWord(e.target.value)
     }
+
+    // const router = useRouter();
+
+    // function aa(){
+    //     router.push(`/search`);
+    // }
 
     return (
         <div className={styles.header_shadow}>
@@ -34,7 +41,9 @@ export default  function Header({user}){
                             <Link href="#none">고객센터</Link>
                         </li>
                     </ul>
-                    : <form action={logOut}>
+                    : 
+                    <form action={logOut}>
+                        <Link href="/mypage">My page</Link>
                         <button className={styles.logout}>로그아웃</button>
                     </form>}
                 </div>
@@ -45,11 +54,10 @@ export default  function Header({user}){
                             <img src="https://res.cloudinary.com/dup3ee8is/image/upload/v1715824440/logo.svg" alt="컬리마켓 로고" />
                         </Link>
                     </h1>
-                    <div className={styles.input_area}>
+                    <form className={styles.input_area}>
                         <input type="text" placeholder="검색어를 입력해주세요" className={styles.search_input} value={word} onChange={searchWord}/>
-                        {word}
-                        <button className={styles.search_btn}>검색</button>
-                    </div>
+                        <button className={styles.search_btn} onSubmit={(e)=>{setWord("")}}>검색</button>
+                    </form>
                     <ul className={styles.icon_area}>
                         <li className={styles.delivery}>
                             <button>배송지</button>
