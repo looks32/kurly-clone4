@@ -8,10 +8,9 @@ import { logOut } from "../lib/logout";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
-export default  function Header({user}){
+export default function Header({user}){
 
     // export default function Header(){
-    // const path = usePathname();
 
     const [word, setWord] = useState('');
 
@@ -23,10 +22,14 @@ export default  function Header({user}){
 
     function searchGo(event){
         event.preventDefault();
-        const name = event.target.search.value; // 폼 입력 값 가져오기
-        router.push(`/search?name=${encodeURIComponent(name)}`);
+        const name = event.target.search.value;
 
-        setWord('');
+        if(name.length === 0){
+            alert('검색어를 입력해주세요');
+        }else{
+            router.push(`/search?name=${encodeURIComponent(name)}`);
+            // setWord('');
+        }
     }
 
     return (
