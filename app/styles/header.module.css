@@ -1,8 +1,3 @@
-/* .nav {
-    background-color: red;;
-} */
-
-
 .font_puple {
     color: #5f0080;
 }
@@ -183,6 +178,11 @@
 .delivery_info a {
     color: #666;
     font-size: 13px;
+}
+
+.mypage {
+    font-size: 12px;
+    margin-right: 10px;
 }
 
 

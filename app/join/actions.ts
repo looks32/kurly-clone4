@@ -81,11 +81,16 @@ const formSchema = z.object({
 
 	joinTel : z.string()
 	.min(11,"휴대폰 번호를 제대로 입력해주세요")
-	.max(11,"휴대폰 번호는 10자를 넘지 말아주세요")
+	.max(11,"휴대폰 번호는 10자를 넘지 말아주세요"),
+
+	joinAddress : z.string().min(1, "주소를 입력해주세요")
+
 }).refine(checkPasswords , {
 	message : '동일한 비밀번호를 입력해주세요.',
 	path : ['joinPw2']
 })
+
+
 
 
 export async function createAcccount(prevState:any, formData:FormData){
@@ -95,7 +100,8 @@ export async function createAcccount(prevState:any, formData:FormData){
 		joinPw2:formData.get("joinPw2"),
 		joinName:formData.get("joinName"),
 		joinMail:formData.get("joinMail"),
-		joinTel:formData.get("joinTel")
+		joinTel:formData.get("joinTel"),
+		joinAddress:formData.get("joinAddress")
 	}
 	//console.log(data)
 	
@@ -124,6 +130,7 @@ export async function createAcccount(prevState:any, formData:FormData){
 				username : result.data.joinName,
 				email : result.data.joinMail,
 				phone : result.data.joinTel,
+				address : result.data.joinAddress
 			},
 			select : {
 				id : true

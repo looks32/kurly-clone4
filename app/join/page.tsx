@@ -63,6 +63,13 @@ export default function Join() {
                         </div>
                         {state?.fieldErrors.joinTel && <div className={styles.errors}>{state?.fieldErrors.joinTel}</div>}
                     </li>
+                    <li>
+                        <label htmlFor="joinAddress">주소</label>
+                        <div>
+                            <input type="text" name="joinAddress" id="joinAddress" placeholder="주소를 입력해주세요" />
+                        </div>
+                        {state?.fieldErrors.joinAddress && <div className={styles.errors}>{state?.fieldErrors.joinAddress}</div>}
+                    </li>
                 </ul>
             </div>
             <div className={styles.btn_area}>

@@ -8,6 +8,7 @@ async function getUsers() {
       username: true,
       email: true,
       phone: true,
+      address : true,
       created_at: true,
       updated_at: true
     },
@@ -26,6 +27,7 @@ export default async function Profile() {
           {`NAME : ${u.username}`}<br/>
           {`EMAIL : ${u.email}`}<br/>
           {`PHONE : ${u.phone}`}<br/>
+          {`ADDRESS : ${u.address}`}<br/>
           {`CREATE : ${u.created_at}`}<br/>
           {`UPDATE : ${u.updated_at}`}<br/><br/>
         </div>

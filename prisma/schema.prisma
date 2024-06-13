@@ -3,9 +3,9 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
+  provider = "sqlite"
   url       = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  // directUrl = env("DIRECT_URL")
 }
 
 model User {
@@ -17,6 +17,7 @@ model User {
   phone String? //@unique
   github_id String? @unique
   avater String?
+  address String?
   // avater String? @default("http://222.com/asdasd");
   // 이런식으로 기본 이미지를 넣어 줄 수 도 있다.
   created_at DateTime @default(now())
