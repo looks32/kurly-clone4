@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import getSession from "../lib/session";
 import { cookies } from "next/headers";
 
-export async function deleteAccount(prevState:any, formData:FormData){
+export async function deleteAccount(){
 
 	const session = await getSession();
 
@@ -16,7 +16,7 @@ export async function deleteAccount(prevState:any, formData:FormData){
 		}
 	})
 	session.destroy();
-	redirect("/mypage/out");
+	redirect("/members");
 }
 
 

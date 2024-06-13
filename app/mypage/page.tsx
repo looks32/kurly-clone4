@@ -1,18 +1,22 @@
 "use client";
 
 import { useFormState } from "react-dom";
-import { createAcccount } from "./actions";
+import { edtiAcccount } from "./actions";
+import { deleteAccount } from "./actions-quit";
 
 import Btn from "../components/btn";
 import styles from "../styles/join.module.css";
-import { deleteAccount } from "./actions-quit";
+import { useState,useEffect } from "react";
+import { getUser } from "../lib/getuser";
+import { API_URL } from "../api/movie-api";
+
 
 
 export default function Mypage() {
 
-  const [state, dispatch] = useFormState(createAcccount, null);
+  const [state, dispatch] = useFormState(edtiAcccount, null);
 
-  const [state2, dispatch2] = useFormState(deleteAccount, null);
+  const [userId , SetUserId] = useState('ss');
 
   return (
     <div className={styles.join_wrap}>
@@ -23,7 +27,9 @@ export default function Mypage() {
                     <li>
                         <label htmlFor="joinId">아이디</label>
                         <div>
-                            <input type="text" name="joinId" id="joinId" placeholder="아이디를 입력해주세요"/>
+                            <input type="text" name="joinId" id="joinId" value={userId} onChange={(e)=>{
+                                SetUserId(e.target.value)
+                            }} placeholder="아이디를 입력해주세요" readOnly/>
                             {/* <Btn tit="중복확인" color="white" type="button"/> */}
                         </div>
                         {state?.fieldErrors.joinId && <div className={styles.errors}>{state?.fieldErrors.joinId}</div>}
@@ -36,7 +42,7 @@ export default function Mypage() {
                         {state?.fieldErrors.joinPw && <div className={styles.errors}>{state?.fieldErrors.joinPw}</div>}
                     </li>
                     <li>
-                        <label htmlFor="joinPw2">비밀번호</label>
+                        <label htmlFor="joinPw2">비밀번호 확인</label>
                         <div>
                             <input type="password" name="joinPw2" id="joinPw2" placeholder="비밀번호를 한번 더 입력해주세요"/>
                         </div>
@@ -74,11 +80,10 @@ export default function Mypage() {
                 </ul>
             </div>
             <div className={styles.btn_area}>
-                <Btn tit="가입하기" color="basic"/>  
+                <Btn tit="회원정보수정" color="basic"/> 
             </div>  
-        </form>
-
-        <form action={dispatch2}>
+        </form> 
+        <form action={deleteAccount} className={styles.out_area}>
             <Btn tit="탈퇴하기" color="white"/>
         </form>
     </div>

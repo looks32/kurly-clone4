@@ -6,26 +6,24 @@ import db from "../lib/db";
 import bcrypt from "bcrypt";
 import { redirect } from "next/navigation";
 import getSession from "../lib/session";
-import { cookies } from "next/headers";
-
 
 
 const checkJoinId = (joinId:string) => !joinId.includes('potato');
 
 const checkPasswords = ({joinPw, joinPw2} : {joinPw:string, joinPw2:string}) => joinPw === joinPw2
 
-const checkUniqueUsername = async (userid:string) => {
-	const user = await db.user.findUnique({
-		where: {
-			userid,
-		},
-		select : {
-			id : true,
-		},
-	})
+// const checkUniqueUsername = async (userid:string) => {
+// 	const user = await db.user.findUnique({
+// 		where: {
+// 			userid,
+// 		},
+// 		select : {
+// 			id : true,
+// 		},
+// 	})
 
-	return !Boolean(user)
-}
+// 	return !Boolean(user)
+// }
 
 const checkUniqueEmail = async (email:string) => {
 	const user = await db.user.findUnique({
@@ -50,8 +48,8 @@ const formSchema = z.object({
 		required_error : "id를 입력해주세요."
 	}).min(1 ,"아이디를 입력해주세요.")
 	.max(10, "아이디는 10자를 넘지 말아주세요.")
-	.refine(checkJoinId, "no potatoes!!!")
-	.refine(checkUniqueUsername,"중복된 id입니다."),//.transform((joinId) => `😍 ${joinId} 😍`),
+	.refine(checkJoinId, "no potatoes!!!"),
+	//.refine(checkUniqueUsername,"중복된 id입니다."),//.transform((joinId) => `😍 ${joinId} 😍`),
 
 	joinPw  : z.string()
 	.min(PASSWORD_MIN_LENGTH, "비밀번호는 최소 4글자 이상 작성해주세요. ")
@@ -82,9 +80,10 @@ const formSchema = z.object({
 })
 
 
+export async function edtiAcccount(prevState:any, formData:FormData){
 
+	const session = await getSession();
 
-export async function createAcccount(prevState:any, formData:FormData){
 	const data = {
 		joinId:formData.get("joinId"),
 		joinPw:formData.get("joinPw"),
@@ -104,17 +103,17 @@ export async function createAcccount(prevState:any, formData:FormData){
 
 	const result = await formSchema.safeParseAsync(data);
 	if(!result.success){
-		//console.log(result.error) // 긴에러를 보여준다.
-		//console.log(result.error.flatten()) // flatten을 이용하면 error를 짧게 보여준다.
-
 		return result.error.flatten(); // error를 return 해줌.
 	} else {
 
 		const hashedPassword = await bcrypt.hash(result.data.joinPw,12);
 		console.log(hashedPassword);
 
-		// db저장
-		const user = await db.user.create({
+		// db 업데이트
+		const user = await db.user.update({
+			where : {
+				id : session.id
+			},
 			data : {
 				userid : result.data.joinId,
 				password : hashedPassword,
@@ -127,15 +126,8 @@ export async function createAcccount(prevState:any, formData:FormData){
 				id : true
 			}
 		})
-
-		const session = await getSession();
-		session.id = user.id;
-		await session.save();
-		redirect("/");
-
-		//console.log(joinId);
-		// console.log(user);
-		// console.log('회원가입 완료!', result.data);
+		
+		redirect("/members");
 	}
 }
 

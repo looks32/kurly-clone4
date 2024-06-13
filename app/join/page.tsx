@@ -35,7 +35,7 @@ export default function Join() {
                         {state?.fieldErrors.joinPw && <div className={styles.errors}>{state?.fieldErrors.joinPw}</div>}
                     </li>
                     <li>
-                        <label htmlFor="joinPw2">비밀번호</label>
+                        <label htmlFor="joinPw2">비밀번호 확인</label>
                         <div>
                             <input type="password" name="joinPw2" id="joinPw2" placeholder="비밀번호를 한번 더 입력해주세요"/>
                         </div>

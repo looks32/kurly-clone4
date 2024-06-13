@@ -74,3 +74,13 @@
 .btn_area button ~ button {
     margin-left: 10px;
 }
+
+.out_area {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.out_area button {
+    width: 240px;
+}
