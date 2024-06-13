@@ -66,7 +66,7 @@ const formSchema = z.object({
 
 	joinMail : z.string()
 	.toLowerCase()
-	.email("이메일 형식에 맞게 입력해주세요.").refine(checkUniqueEmail , "중복된 이메일입니다."),
+	.email("이메일 형식에 맞게 입력해주세요."),//.refine(checkUniqueEmail , "중복된 이메일입니다."),
 
 	joinTel : z.string()
 	.min(11,"휴대폰 번호를 제대로 입력해주세요")
