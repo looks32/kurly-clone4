@@ -7,24 +7,21 @@ import Btn from "../components/btn";
 import styles from "../styles/join.module.css";
 import { useState } from "react";
 
-
 export default function Mypage({ initialState }) {
   const [state, dispatch] = useFormState(edtiAcccount, initialState);
 
-//   const [userName, setUserName] = useState()
-
   const [userData, setUserData] = useState({
-    userId: state.userid,
-    userName: state.username,
-    userMail: state.email,
-    userTel: state.phone,
-    userAddress: state.address
+    joinId: state.userid,
+    joinName: state.username,
+    joinMail: state.email,
+    joinTel: state.phone,
+    joinAddress: state.address
   });
 
   const handleChange = (e) => {
-    setUserData(e.target.value);
+    const { name, value } = e.target;
+    setUserData((prev) => ({ ...prev, [name]: value }));
   };
-
 
   return (
     <div className={styles.join_wrap}>
@@ -39,7 +36,7 @@ export default function Mypage({ initialState }) {
                   type="text"
                   name="joinId"
                   id="joinId"
-                  value={userData.userId}
+                  value={userData.joinId}
                   readOnly
                 />
               </div>
@@ -82,7 +79,7 @@ export default function Mypage({ initialState }) {
                   type="text"
                   name="joinName"
                   id="joinName"
-                  value={userData.userName}
+                  value={userData.joinName}
 				  onChange={handleChange}
                 />
               </div>
@@ -97,7 +94,7 @@ export default function Mypage({ initialState }) {
                   type="text"
                   name="joinMail"
                   id="joinMail"
-                  value={userData.userMail}
+                  value={userData.joinMail}
 				  onChange={handleChange}
                 />
               </div>
@@ -112,7 +109,7 @@ export default function Mypage({ initialState }) {
                   type="text"
                   name="joinTel"
                   id="joinTel"
-                  value={userData.userTel}
+                  value={userData.joinTel}
 				  onChange={handleChange}
                 />
               </div>
@@ -127,7 +124,7 @@ export default function Mypage({ initialState }) {
                   type="text"
                   name="joinAddress"
                   id="joinAddress"
-                  value={userData.userAddress}
+                  value={userData.joinAddress}
 				  onChange={handleChange}
                 />
               </div>
