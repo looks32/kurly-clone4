@@ -23,7 +23,7 @@ export default async function Profile() {
     <div className="members">
       {user.map((u) => (
         <div key={u.userid}>
-          {`ID : ${u.id}`}<br/>
+          {`NUM : ${u.id}`}<br/>
           {`ID : ${u.userid}`}<br/>
           {`PW : ${u.password}`}<br/>
           {`NAME : ${u.username}`}<br/>

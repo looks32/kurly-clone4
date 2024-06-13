@@ -47,7 +47,7 @@ const formSchema = z.object({
 		invalid_type_error : "숫자만 입력하지 말아주세요.",
 		required_error : "id를 입력해주세요."
 	}).min(1 ,"아이디를 입력해주세요.")
-	.max(10, "아이디는 10자를 넘지 말아주세요.")
+	// .max(10, "아이디는 10자를 넘지 말아주세요.")
 	.refine(checkJoinId, "no potatoes!!!"),
 	//.refine(checkUniqueUsername,"중복된 id입니다."),//.transform((joinId) => `😍 ${joinId} 😍`),
 
