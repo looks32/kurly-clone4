@@ -3,6 +3,7 @@ import db from "../lib/db";
 async function getUsers() {
   const user = await db.user.findMany({
     select: {
+      id: true,
       userid: true,
       password : true,
       username: true,
@@ -19,9 +20,10 @@ async function getUsers() {
 export default async function Profile() {
   const user = await getUsers();
   return (
-    <div className="p-5 flex flex-col gap-5">
+    <div className="members">
       {user.map((u) => (
         <div key={u.userid}>
+          {`ID : ${u.id}`}<br/>
           {`ID : ${u.userid}`}<br/>
           {`PW : ${u.password}`}<br/>
           {`NAME : ${u.username}`}<br/>

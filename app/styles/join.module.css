@@ -62,7 +62,15 @@
 }
 
 
+.btn_area {
+    display: flex;
+    justify-content: center;
+}
+
 .btn_area button {
     width: 240px;
-    margin: 0 auto;
+}
+
+.btn_area button ~ button {
+    margin-left: 10px;
 }

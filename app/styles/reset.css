@@ -201,3 +201,9 @@ body.fix main {position:fixed; width:100%; height:100%}
 .swiper:hover .swiper-next {
 	opacity: 1;
 }
+
+
+.members {
+	width: 800px;
+	margin: 30px auto 0;
+}
