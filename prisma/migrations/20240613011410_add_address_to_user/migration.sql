@@ -10,7 +10,7 @@ CREATE TABLE "User" (
     "avater" TEXT,
     "address" TEXT,
     "created_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "updated_at" DATETIME NOT NULL
+    "updated_at" DATETIME NOT NULL 
 );
 
 -- CreateTable
