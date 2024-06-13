@@ -50,7 +50,7 @@ export default function Header({user}){
                     </ul>
                     : 
                     <form action={logOut}>
-                        <Link href="/mypage" className={styles.mypage}>My page</Link>
+                        <Link href="/mypage" className={styles.mypage}><span>{user.userid}</span>님</Link>
                         <button className={styles.logout}>로그아웃</button>
                     </form>}
                 </div>

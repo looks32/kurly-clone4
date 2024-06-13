@@ -185,8 +185,21 @@
     margin-right: 10px;
 }
 
+.mypage span {
+    color: #5f0080;
+    font-weight: bold;
+}
+
+.mypage:hover span {
+    color: #000;
+}
+
 
 .logout {
     font-size: 12px;
+}
+
+.logout:hover { 
+    color: #5f0080;
 }
 

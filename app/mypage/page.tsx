@@ -16,7 +16,7 @@ export default function Mypage() {
 
   const [state, dispatch] = useFormState(edtiAcccount, null);
 
-  const [userId , SetUserId] = useState('ss');
+  const [userId , SetUserId] = useState('수정할 수 없습니다.');
 
   return (
     <div className={styles.join_wrap}>
