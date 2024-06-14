@@ -13,7 +13,7 @@ import { Suspense } from "react";
 
 export const metadata = {
     title: "Goods",
-  };
+};
 
 import goods from "../../json/goods-slider.json";
 
