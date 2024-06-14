@@ -18,6 +18,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="ko">
+      <link rel="icon" href="https://res.kurly.com/favicon.ico"></link>
       <body>
         <Header user={user}/>
           {children}
