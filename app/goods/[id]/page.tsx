@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import MovieInfo, { getMovie } from "../../components/movie-info";
 import MovieVideos from "../../components/movie-videos";
 import { Suspense } from "react";
+import styles from "../../styles/goods.module.css";
 
 // export async function generateMetadata({ params: { id } }) {
 //     const movie = await getMovie(id);
@@ -37,9 +38,72 @@ export default async function Goods({params:{id}}){
             <Suspense fallback={<h1>Loading movie videos</h1>}>
                 <MovieVideos id={id}/>
             </Suspense> */}
-            <img src={goods[id-1].poster} alt={goods[id-1].text}/>
-            <div>{goods[id-1].text}</div>
-            <strong>{goods[id-1].price} 원</strong>
+
+            <div>
+                <div>
+                    <img src={goods[id-1].poster} alt={goods[id-1].text}/>
+                </div>
+                <div>
+                    <div>{goods[id-1].text}</div>
+                    <strong>{goods[id-1].price} 원</strong>
+                    <div>{goods[id-1].per} %</div>
+                    <div>{goods[id-1].before} 원</div>
+                    <div>원산지 : 국내산</div>
+                    <ul>
+                        <li>
+                            <div>배송</div>
+                            <div>샛별배송</div>
+                        </li>
+                        <li>
+                            <div>판매자</div>
+                            <div>컬리</div>
+                        </li>
+                        <li>
+                            <div>포장타입</div>
+                            <div>
+                                냉장 (종이포장)
+                                <br/>
+                                <span>택배배송은 에코 포장이 스티로폼으로 대체됩니다.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div>판매단위</div>
+                            <div>1봉</div>
+                        </li>
+                        <li>
+                            <div>중량/용량</div>
+                            <div>5입</div>
+                        </li>
+                        <li>
+                            <div>소비기한(또는 유통기한)정보</div>
+                            <div>농산물로 별로의 소비기한은 없으나 가급적 빨리 섭취를 권장드립니다.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <nav className={styles.nav}>
+                <ul>
+                    <li>
+                        <a href="#setion1">
+                            <span>상품설명</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#setion2">
+                            <span>후기</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <section id="setion1">
+                <section>상품설명</section>
+            </section>
+
+            <section id="setion2">
+                <section>후기</section>
+            </section>
         </>
     )
 }

@@ -1,0 +1,7 @@
+.recent_wrap {
+	position: fixed;
+	right: 40px;
+	top: 600px;
+	border: 1px solid #dbdbdb;
+	padding: 10px;
+}
