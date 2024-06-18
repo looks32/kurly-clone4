@@ -7,7 +7,8 @@
       "per" : "15",
       "price" : "6,630",
       "review" : "1,434",
-      "cate" : "food"
+      "cate" : "food",
+      "detail" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1718689934/goods/goods1-detail.png"
     },
     {
       "id": "2",
@@ -17,7 +18,8 @@
       "per" : "30",
       "price" : "4,690",
       "review" : "235",
-      "cate" : "food"
+      "cate" : "food",
+      "detail" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1718691734/goods/goods2-detail.png"
     },
     {
       "id": "3",
@@ -27,7 +29,8 @@
       "per" : "24",
       "price" : "8,980",
       "review" : "1,736",
-      "cate" : "food"
+      "cate" : "food",
+      "detail" : "https://res.cloudinary.com/dup3ee8is/image/upload/v1718692533/goods/goods3-detail.png"
     },
     {
       "id": "4",

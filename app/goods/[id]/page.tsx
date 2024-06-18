@@ -1,9 +1,13 @@
+"use client";
+
 import { Metadata } from "next";
 // import { API_URL } from "../../api/movie-api";
 import MovieInfo, { getMovie } from "../../components/movie-info";
 import MovieVideos from "../../components/movie-videos";
-import { Suspense } from "react";
-import styles from "../../styles/goods.module.css";
+import { Suspense, useEffect, useRef } from "react";
+// import styles from "../../styles/goods.module.css";
+import styles from "../../styles/goods-detail.module.css";
+
 
 // export async function generateMetadata({ params: { id } }) {
 //     const movie = await getMovie(id);
@@ -12,13 +16,64 @@ import styles from "../../styles/goods.module.css";
 //     };
 //   }
 
-export const metadata = {
-    title: "Goods",
-};
+import {
+    motion,
+    useMotionValueEvent,
+    useScroll,
+    useAnimation
+    } from "framer-motion";
+
+// export const metadata = {
+//     title: "Goods",
+// };
 
 import goods from "../../json/goods-slider.json";
 
 export default async function Goods({params:{id}}){
+
+    const navAnimations = [useAnimation(), useAnimation()];
+
+    const { scrollY, scrollYProgress } = useScroll();
+        useMotionValueEvent(scrollY, "change", () => {
+        //console.log(scrollY.get());
+    });
+
+    const section1Ref = useRef(null);
+    const section2Ref = useRef(null); 
+
+
+    useEffect(() => {
+        scrollY.onChange(() => {
+
+            //const section1Top = section1Ref.current.offsetTop;
+            //const section2Top = section2Ref.current.offsetTop;
+
+            //console.log(section1Top);
+            //console.log(section2Top);
+        //   if (scrollY.get() > section1Top) {
+        //     navAnimations[0].start("scroll");
+        //   } else {
+        //     navAnimations[0].start("top");
+        //   }
+
+        //   if (scrollY.get() > section2Top) {
+        //     navAnimations[1].start("scroll");
+        //   } else {
+        //     navAnimations[1].start("top");
+        //   }
+
+        });
+      }, [scrollY, navAnimations[0],  navAnimations[1]]);
+
+      const navVariants = {
+        top: {
+          backgroundColor: "rgba(0, 0, 0, 0)",
+        },
+        scroll: {
+          backgroundColor: "rgba(0, 0, 0, 1)",
+        },
+      };
+
     //const movie = await getMovie(id);
     //const videos = await getVideos(id);
     // 위의 방법으로 불러오면 각자 불러오기 때문에 오래걸림 (순차적 로딩);
@@ -26,7 +81,7 @@ export default async function Goods({params:{id}}){
     //const [movie, videos] = await Promise.all([getMovie(id), getVideos(id)])
     //return <h1>상품명 {id}</h1>
     return (
-        <>
+        <div className={styles.goods_wrap}>
             {/* <h1>{movie.title}</h1>
             <div>{videos.key}</div> */}
             {/*
@@ -39,17 +94,21 @@ export default async function Goods({params:{id}}){
                 <MovieVideos id={id}/>
             </Suspense> */}
 
-            <div>
-                <div>
+            <div className={styles.main}>
+                <div className={styles.img_area}>
                     <img src={goods[id-1].poster} alt={goods[id-1].text}/>
                 </div>
-                <div>
-                    <div>{goods[id-1].text}</div>
-                    <strong>{goods[id-1].price} 원</strong>
-                    <div>{goods[id-1].per} %</div>
-                    <div>{goods[id-1].before} 원</div>
-                    <div>원산지 : 국내산</div>
-                    <ul>
+                <div className={styles.detail_area}>
+                    <p className={styles.tit}>{goods[id-1].text}</p>
+                    <div className={styles.money}>
+                        <p>{goods[id-1].per} %</p>
+                        <strong>
+                            <span>{goods[id-1].price}</span>
+                        원</strong>
+                    </div>
+                    <p className={styles.before}>{goods[id-1].before} 원</p>
+                    <p className={styles.origin}>원산지 : 국내산</p>
+                    <ul className={styles.detail_list}>
                         <li>
                             <div>배송</div>
                             <div>샛별배송</div>
@@ -74,37 +133,48 @@ export default async function Goods({params:{id}}){
                             <div>중량/용량</div>
                             <div>5입</div>
                         </li>
-                        <li>
-                            <div>소비기한(또는 유통기한)정보</div>
-                            <div>농산물로 별로의 소비기한은 없으나 가급적 빨리 섭취를 권장드립니다.</div>
-                        </li>
                     </ul>
                 </div>
             </div>
 
             <nav className={styles.nav}>
                 <ul>
-                    <li>
+                    <motion.li variants={navVariants} animate={navAnimations[0]} initial={"top"} ref={section1Ref}>
                         <a href="#setion1">
                             <span>상품설명</span>
                         </a>
-                    </li>
-                    <li>
+                    </motion.li>
+                    <motion.li variants={navVariants} animate={navAnimations[1]} initial={"top"} ref={section2Ref}>
                         <a href="#setion2">
                             <span>후기</span>
                         </a>
-                    </li>
+                    </motion.li>
                 </ul>
             </nav>
 
-            <section id="setion1">
-                <section>상품설명</section>
+            <section id="setion1" className={styles.section}>
+                <img src={goods[id-1].detail ? goods[id-1].detail : 'https://res.cloudinary.com/dup3ee8is/image/upload/v1718691526/goods/goods-default.jpg'} alt={goods[id-1].detail ? goods[id-1].text : '이미지가 없습니다.'} />
             </section>
 
-            <section id="setion2">
-                <section>후기</section>
+            <section id="setion2" className={styles.section}>
+                <h2>상품후기</h2>
+                <ul className={styles.review_area}>
+                    <li>
+                        <div>
+                            <span>베스트</span>
+                            <span>일반</span>
+                            <span>김**</span>
+                        </div>
+                        <div>
+                            <strong>당도선별 성주 참외 1.5kg</strong>
+                            <pre>내용내용</pre>
+                            <span>2024.05.20</span>
+                        </div>
+                        <div></div>
+                    </li>
+                </ul>
             </section>
-        </>
+        </div>
     )
 }
 

@@ -1,7 +1,3 @@
-.goods_wrap {
-    /* width: 249px; 임시 */
-}
-
 .img_area,
 .img_area img {
     border-radius: 4px;
@@ -76,8 +72,3 @@
     margin-top: 2px;
     margin-right: 3px;
 }
-
-/* 
-.nav {
-    position: sticky;
-} */

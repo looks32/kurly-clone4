@@ -1,0 +1,141 @@
+.goods_wrap {
+    width: 1050px;
+    margin: 30px auto 0;
+    padding-bottom: 40px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .img_area {
+    width: 430px;
+}
+
+.main .img_area img {
+    width: 100%;
+}
+
+.main .detail_area {
+    width: 560px;
+}
+
+.main .detail_area .tit {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+}
+
+.main .detail_area .money {
+    display: flex;
+    padding-top: 20px;
+}
+
+.main .detail_area .money > p {
+    padding-right: 9px;
+    font-size: 28px;
+    color: #fa622f;
+    font-weight: bold;
+}
+
+.main .detail_area .money > strong {
+    font-size: 18px;
+}
+
+.main .detail_area .money > strong span {
+    padding-right: 4px;
+    font-size: 28px;
+    color: #333;
+}
+
+.main .detail_area .before {
+    font-size: 16px;
+    color: #b5b5b5;
+    letter-spacing: -0.5px;
+    text-decoration: line-through;
+}
+
+.main .detail_area .origin {
+    color: #333;
+    font-size: 24px;
+    letter-spacing: -0.5px;
+    margin-top: 8px;
+}
+
+.detail_area .detail_list {
+    margin-top: 20px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.detail_area .detail_list li {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 17px 0px 18px;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    border-top: 1px solid #f4f4f4;
+}
+
+.detail_area .detail_list li > div:first-child {
+    width: 128px;
+    height: 100%;
+    color: #666;
+    line-height: 19px;
+}
+
+.detail_area .detail_list li > div:last-child  {
+    color: #333;
+    line-height: 19px;
+    white-space: pre-line;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.nav {
+    position: sticky;
+    top: 0;
+    margin-top: 100px;
+    border:1px solid #eee;
+}
+
+.nav ul {
+    display: flex;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.nav ul li {
+    flex: 1;
+}
+
+.nav ul li ~ li  {
+    border-left: 1px solid #eee;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 19px 0;
+}
+
+.section {
+    padding-top: 60px;
+}
+
+.section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+}
+
+.review_area {
+    border-top: 1px solid #333;
+}
+
+.review_area li {
+    padding: 30px 0px 19px 20px;
+    border-bottom: 1px solid #f4f4f4
+}
