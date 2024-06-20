@@ -47,7 +47,7 @@ export default function Recent() {
 		{items.length ?
 			<div className={styles.recent_wrap}>
 			<p className={styles.tit}>최근 본 상품</p>
-				<Swiper
+				{/* <Swiper
 				slidesPerView={3}
 				direction="vertical"
 				loop={false}
@@ -60,7 +60,7 @@ export default function Recent() {
 							</SwiperSlide>
 						))
 					}
-				</Swiper>
+				</Swiper> */}
 			</div>
 		: null}
 
