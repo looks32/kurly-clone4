@@ -3,6 +3,7 @@ import Header from "./components/header";
 import TopBtn from "./components/top-btn";
 import { Metadata } from "next";
 import { getUser } from "./lib/getuser";
+import Recent from "./components/recent";
 
 export const metadata = {
   title: {
@@ -22,6 +23,7 @@ export default async function RootLayout({ children }) {
       <body>
         <Header user={user}/>
           {children}
+        <Recent/>
         <TopBtn/>
       </body>
     </html>

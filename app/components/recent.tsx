@@ -44,7 +44,7 @@ export default function Recent() {
 			placeholder="값을 입력하세요"
 		/>
 		<button onClick={handleAddItem}>추가</button>
-		{/* {items.length ?
+		{items.length ?
 			<div className={styles.recent_wrap}>
 			<p className={styles.tit}>최근 본 상품</p>
 				<Swiper
@@ -62,7 +62,7 @@ export default function Recent() {
 					}
 				</Swiper>
 			</div>
-		: null} */}
+		: null}
 
 	</>
 	
