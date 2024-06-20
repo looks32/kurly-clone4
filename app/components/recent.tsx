@@ -44,10 +44,10 @@ export default function Recent() {
 			placeholder="값을 입력하세요"
 		/>
 		<button onClick={handleAddItem}>추가</button>
-		{items.length ?
+		{/* {items.length ?
 			<div className={styles.recent_wrap}>
 			<p className={styles.tit}>최근 본 상품</p>
-				{/* <Swiper
+				<Swiper
 				slidesPerView={3}
 				direction="vertical"
 				loop={false}
@@ -60,9 +60,9 @@ export default function Recent() {
 							</SwiperSlide>
 						))
 					}
-				</Swiper> */}
+				</Swiper>
 			</div>
-		: null}
+		: null} */}
 
 	</>
 	
