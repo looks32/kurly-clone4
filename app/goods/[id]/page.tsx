@@ -161,16 +161,63 @@ export default async function Goods({params:{id}}){
                 <ul className={styles.review_area}>
                     <li>
                         <div>
-                            <span>베스트</span>
-                            <span>일반</span>
-                            <span>김**</span>
+                            <span className={`${styles.label} ${styles.best}`}>베스트</span>
+                            <span className={`${styles.label} ${styles.members}`}>멤버스</span>
+                            <span className={styles.label}>일반</span>
+                            <span className={styles.name}>김**</span>
                         </div>
-                        <div>
+                        <div className={styles.detail_text_area}>
                             <strong>당도선별 성주 참외 1.5kg</strong>
-                            <pre>내용내용</pre>
-                            <span>2024.05.20</span>
+                            <p>말모말모 
+                                조선호텔 푸드는 늘 만족도가 높은데 삼계탕은 처음이에요
+                                닭은 후라이드 치킨으로만
+                                먹는 사람인데 끓이자 마자
+                                먹어보고 싶더라구요
+                                푹 끓였는데도 물 육수 첨가 필요없이 알맞아서 좋았고
+                                깔끔한 닭이 찹쌀 인삼 품고
+                                냄새도 너무너무 좋고 손대자마자 살살살 풀어집니다
+                                첨에 보여주니 레토르트 싫다고 무관심하던 남편 너무 맛있게 국물까지 싹 비우더라구요
+                                뼈바르기가 매우 수월한데 부드럽게 푹 끓여져 있고 예쁜 영계라 뼈가 잘잘합니다
+                                아가나 아이들 먹을땐 젓가락으로 톡톡톡 확인 잘 해서 걸러내고 먹이면 정말 정말 좋아할거에요 둥구나무 오미자생채 곁들이면 최고입니다
+                                </p>
+                            <div className={styles.detail_img_area}>
+                                <button>
+                                    <img src="" alt="" />
+                                </button>
+                            </div>
+                            <span className={styles.date}>2024.05.20</span>
                         </div>
-                        <div></div>
+                        <button className={styles.good_btn}>도움되요<span>90</span></button>
+                    </li>
+                    <li>
+                        <div>
+                            <span className={`${styles.label} ${styles.best}`}>베스트</span>
+                            <span className={`${styles.label} ${styles.members}`}>멤버스</span>
+                            <span className={styles.label}>일반</span>
+                            <span className={styles.name}>김**</span>
+                        </div>
+                        <div className={styles.detail_text_area}>
+                            <strong>당도선별 성주 참외 1.5kg</strong>
+                            <p>말모말모 
+                                조선호텔 푸드는 늘 만족도가 높은데 삼계탕은 처음이에요
+                                닭은 후라이드 치킨으로만
+                                먹는 사람인데 끓이자 마자
+                                먹어보고 싶더라구요
+                                푹 끓였는데도 물 육수 첨가 필요없이 알맞아서 좋았고
+                                깔끔한 닭이 찹쌀 인삼 품고
+                                냄새도 너무너무 좋고 손대자마자 살살살 풀어집니다
+                                첨에 보여주니 레토르트 싫다고 무관심하던 남편 너무 맛있게 국물까지 싹 비우더라구요
+                                뼈바르기가 매우 수월한데 부드럽게 푹 끓여져 있고 예쁜 영계라 뼈가 잘잘합니다
+                                아가나 아이들 먹을땐 젓가락으로 톡톡톡 확인 잘 해서 걸러내고 먹이면 정말 정말 좋아할거에요 둥구나무 오미자생채 곁들이면 최고입니다
+                                </p>
+                            <div className={styles.detail_img_area}>
+                                <button>
+                                    <img src="" alt="" />
+                                </button>
+                            </div>
+                            <span className={styles.date}>2024.05.20</span>
+                        </div>
+                        <button className={styles.good_btn}>도움되요<span>90</span></button>
                     </li>
                 </ul>
             </section>
