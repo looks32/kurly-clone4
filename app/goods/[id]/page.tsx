@@ -4,7 +4,7 @@ import { Metadata } from "next";
 // import { API_URL } from "../../api/movie-api";
 import MovieInfo, { getMovie } from "../../components/movie-info";
 import MovieVideos from "../../components/movie-videos";
-import { Suspense, useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 // import styles from "../../styles/goods.module.css";
 import styles from "../../styles/goods-detail.module.css";
 
@@ -31,20 +31,29 @@ import goods from "../../json/goods-slider.json";
 
 export default async function Goods({params:{id}}){
 
-    // useEffect(() => {
+    const [items, setItems] = useState([]);
 
-    //     const storedItems = localStorage.getItem('items');
-    //     if (storedItems) {
-    //         setItems(JSON.parse(storedItems));
-    //     }
+    // 초기 로드 시 localStorage에서 아이템을 가져오기 위한 useEffect
+    useEffect(() => {
+        const storedItems = localStorage.getItem('items');
+        if (storedItems) {
+            setItems(JSON.parse(storedItems));
+        }
+    }, []);
 
-    //     // const newItems = [...items, inputValue];
-    //     const newItems = [...items, aa];
-    //     // setItems(newItems);
-    //     localStorage.setItem('items', JSON.stringify(newItems));
-    //     //setInputValue('');
-        
-    // }, []);
+    // id, thumb, time이 변경될 때마다 새로운 아이템을 추가하기 위한 useEffect
+    useEffect(() => {
+
+        if (id && goods[id-1].poster) { // 모든 값이 유효한 경우에만 실행
+            const a = goods[id-1].poster;
+            setItems(prevItems => {
+                const newItem = { no: id, poster : a};
+                const newItems = [...prevItems, newItem];
+                localStorage.setItem('items', JSON.stringify(newItems));
+                return newItems;
+            });
+        }
+    }, [id, goods[id-1].poster]);
 
     const navAnimations = [useAnimation(), useAnimation()];
 

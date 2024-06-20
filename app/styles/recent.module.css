@@ -2,6 +2,7 @@
 	position: fixed;
 	right: 10px;
 	top: 600px;
+	z-index: 1000;
 	width: 78px;
 	max-height: 280px;
 	border: 1px solid #dbdbdb;
@@ -17,11 +18,10 @@
 }
 
 .recent_swiper {
-	height: 100%;;
+	height: 265px;
 }
 
 .slide_cont {
-	margin-top: 10px;
 	height: 80px !important;
 	background: red
 }
