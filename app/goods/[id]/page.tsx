@@ -31,6 +31,21 @@ import goods from "../../json/goods-slider.json";
 
 export default async function Goods({params:{id}}){
 
+    // useEffect(() => {
+
+    //     const storedItems = localStorage.getItem('items');
+    //     if (storedItems) {
+    //         setItems(JSON.parse(storedItems));
+    //     }
+
+    //     // const newItems = [...items, inputValue];
+    //     const newItems = [...items, aa];
+    //     // setItems(newItems);
+    //     localStorage.setItem('items', JSON.stringify(newItems));
+    //     //setInputValue('');
+        
+    // }, []);
+
     const navAnimations = [useAnimation(), useAnimation()];
 
     const { scrollY, scrollYProgress } = useScroll();

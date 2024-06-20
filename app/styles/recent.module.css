@@ -1,7 +1,27 @@
 .recent_wrap {
 	position: fixed;
-	right: 40px;
+	right: 10px;
 	top: 600px;
+	width: 78px;
+	max-height: 280px;
 	border: 1px solid #dbdbdb;
-	padding: 10px;
+	background-color: #fff;
+	padding: 10px 5px;
+	overflow: hidden;
+}
+
+.tit {
+	font-size: 12px;
+	color: #333;
+	text-align: center;
+}
+
+.recent_swiper {
+	height: 100%;;
+}
+
+.slide_cont {
+	margin-top: 10px;
+	height: 80px !important;
+	background: red
 }
