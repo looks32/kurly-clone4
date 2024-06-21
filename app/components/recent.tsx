@@ -1,11 +1,14 @@
 "use client";
 
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/recent.module.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+
+
 
 
 export default function Recent() {
@@ -17,7 +20,7 @@ export default function Recent() {
         if (storedItems) {
             setItems(JSON.parse(storedItems));
         }
-    }, []);
+    }, [])
 
    
   return (
@@ -36,9 +39,11 @@ export default function Recent() {
 					{
 						items.slice().reverse().map((item, i)=>(
 							<SwiperSlide key={i} className={styles.slide_cont}>
-								<div>
-									<img src={item.poster} alt={item.no} />
-								</div>
+								<Link href={`/goods/${item.no}`}>
+									<div>
+										<img src={item.poster} alt={item.no} />
+									</div>
+								</Link>
 							</SwiperSlide>
 						))
 					}
