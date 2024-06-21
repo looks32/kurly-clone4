@@ -29,8 +29,8 @@ export default function Recent() {
 			<div className={styles.recent_wrap}>
 			<p className={styles.tit}>최근 본 상품</p>
 				<Swiper
-				// slidesPerView={'auto'}
-				slidesPerView={2}
+				slidesPerView={'auto'}
+				// slidesPerView={2}
 				direction="vertical"
 				spaceBetween={10}
 				loop={false}

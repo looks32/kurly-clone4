@@ -32,7 +32,7 @@ export default function SpecialGoods(props) {
         </div>
         <div className={styles.goods_list}>
             {props.goods && props.goods.filter((slide) => slide.today === props.today).map((slide) => (
-              <Goods key={slide.id} text={slide.text} poster={slide.poster} per={slide.per} before={slide.before} price={slide.price} review={slide.review}/>
+              <Goods key={slide.id} id={slide.id} text={slide.text} poster={slide.poster} per={slide.per} before={slide.before} price={slide.price} review={slide.review}/>
             ))}
         </div>
     </div>

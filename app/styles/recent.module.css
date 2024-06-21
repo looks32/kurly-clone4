@@ -22,6 +22,6 @@
 }
 
 .slide_cont {
-	height: 80px !important;
-	background: red
+	/* height: 80px !important; */
+	background: #fff;
 }
