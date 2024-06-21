@@ -30,7 +30,7 @@ export default function Recent() {
 			<p className={styles.tit}>최근 본 상품</p>
 				<Swiper
 				// slidesPerView={'auto'}
-				slidesPerView={3}
+				slidesPerView={2}
 				direction="vertical"
 				spaceBetween={10}
 				loop={false}

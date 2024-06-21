@@ -43,16 +43,21 @@ export default async function Goods({params:{id}}){
 
     // id, thumb, time이 변경될 때마다 새로운 아이템을 추가하기 위한 useEffect
     useEffect(() => {
-        if (id && goods[id-1].poster) { // 모든 값이 유효한 경우에만 실행
-            const a = goods[id-1].poster;
-            setItems(prevItems => {
-                const newItem = { no: id, poster : a};
-                const newItems = [...prevItems, newItem];
-                localStorage.setItem('items', JSON.stringify(newItems));
-                return newItems;
-            });
+        if (id && goods[id - 1]?.poster) { // 모든 값이 유효한 경우에만 실행
+          const newItem = { no: id, poster: goods[id - 1].poster };
+    
+          setItems(prevItems => {
+            // 중복 체크
+            const itemExists = prevItems.some(item => item.no === newItem.no);
+            if (!itemExists) {
+              const newItems = [...prevItems, newItem];
+              localStorage.setItem('items', JSON.stringify(newItems));
+              return newItems;
+            }
+            return prevItems;
+          });
         }
-    }, [id, goods[id-1].poster]);
+      }, [id, goods]);
 
     const navAnimations = [useAnimation(), useAnimation()];
 
