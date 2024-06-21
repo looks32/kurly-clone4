@@ -8,6 +8,9 @@ import { Suspense, useEffect, useRef, useState } from "react";
 // import styles from "../../styles/goods.module.css";
 import styles from "../../styles/goods-detail.module.css";
 
+import { useRecoilState } from 'recoil';
+import { itemsState } from '../../lib/atom';
+
 
 // export async function generateMetadata({ params: { id } }) {
 //     const movie = await getMovie(id);
@@ -31,7 +34,7 @@ import goods from "../../json/goods-slider.json";
 
 export default async function Goods({params:{id}}){
 
-    const [items, setItems] = useState([]);
+    const [items, setItems] = useRecoilState(itemsState);
 
     // 초기 로드 시 localStorage에서 아이템을 가져오기 위한 useEffect
     useEffect(() => {

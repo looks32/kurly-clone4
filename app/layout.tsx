@@ -4,6 +4,7 @@ import TopBtn from "./components/top-btn";
 import { Metadata } from "next";
 import { getUser } from "./lib/getuser";
 import Recent from "./components/recent";
+import RecoilRootWrapper from "./components/recoilWrapper";
 
 export const metadata = {
   title: {
@@ -21,10 +22,12 @@ export default async function RootLayout({ children }) {
     <html lang="ko">
       <link rel="icon" href="https://res.kurly.com/favicon.ico"></link>
       <body>
-        <Header user={user}/>
+        <RecoilRootWrapper>
+          <Header user={user}/>
           {children}
-        <Recent/>
-        <TopBtn/>
+          <Recent/>
+          <TopBtn/>
+        </RecoilRootWrapper>
       </body>
     </html>
   )

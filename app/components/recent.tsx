@@ -8,12 +8,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
 
-
+import { useRecoilState } from 'recoil';
+import { itemsState } from '../lib/atom';
 
 
 export default function Recent() {
 
-	const [items, setItems] = useState([]);
+	const [items, setItems] = useRecoilState(itemsState);
 
     useEffect(() => {
         const storedItems = localStorage.getItem('items');
@@ -21,7 +22,6 @@ export default function Recent() {
             setItems(JSON.parse(storedItems));
         }
     }, [])
-
    
   return (
 	<>
